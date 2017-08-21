@@ -1,0 +1,37 @@
+{template "content","_header"}
+<link href="{CSS_PATH}gzsjqt/about.css" rel="stylesheet" type="text/css">
+
+<?php $cat_arra = array(427,428,429,430,431);?>
+<div class="about-outer">
+    <div class="about-left">
+        {loop $cat_arra $v}
+        <div class="about-left-item">
+            <div class="item-title">
+                <img src="http://www.studyems.com/statics/images/about-icon.jpg">
+                <p>{$CATEGORYS[$v][catname]}</p>
+            </div>
+            {pc:content action="category" catid="$v"}
+            <ul class="item-ul">
+                {loop $data $k2 $v2}
+                <li><a class="{if $catid==$v2[catid]}fa fa-location-arrow{/if}" href="{$v2[url]}" target="_self">{$v2[catname]}</a></li>
+                {/loop}
+            </ul>
+            {/pc}
+        </div>
+        {/loop}
+    </div>
+
+    <div class="about-right">
+        <div class="about-right-title"><p>{$CATEGORYS[$catid][catname]}</p></div>
+        <h4 class="h4">{$title}</h4>
+        <div class="common-text">{$content}</div>
+    </div>
+</div>
+<script>
+    $(function () {
+        var h = $('.about-left').height();
+        $('.about-right').css('min-height',h+20);
+    });
+</script>
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+{template "content","_footer"}

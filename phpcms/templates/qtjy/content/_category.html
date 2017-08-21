@@ -1,0 +1,29 @@
+<ul id="jq_left_menu" class="left-menu {if !$index}xyz{/if}">
+    {php $number=0}
+    {loop $CATEGORYS $k $v}
+    {if $v[parentid]==12 && $number<10}
+    {php $number++}
+    <li>
+        <div class="one-menu">
+            <i class="fa fa-fw"></i><a href="{$v[url]}"><h3>{$v[catname]}</h3></a><i class="fa fa-angle-right"></i>
+        </div>
+        <div class="sub-menu">
+            <dl class="sub_type_dl cl">
+                <dt>
+                    <a rel="nofollow" href="{$v[url]}">{$v[catname]} ></a>
+                </dt>
+                <dd class="cell ">
+                    {php $number2=0}
+                    {loop $CATEGORYS $k2 $v2}
+                    {if $v2[parentid]==$v[catid] && $number2<10}
+                    {php $number2++}
+                        <a href="{$v2[url]}">{$v2[catname]}</a>
+                    {/if}
+                    {/loop}
+                </dd>
+            </dl>
+        </div>
+    </li>
+    {/if}
+    {/loop}
+</ul>

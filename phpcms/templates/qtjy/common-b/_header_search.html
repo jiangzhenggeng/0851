@@ -1,0 +1,86 @@
+<div class="studyems008">
+    <a href="{siteurl($siteid)}">
+        <img src="{CSS_PATH}1/style/images/logo.png">
+    </a>
+</div>
+
+<div class="studyems009">
+    <p class="studyems010">总站</p>
+    <p class="studyems011">[<a href="#" target="_blank">切换城市</a>]</p>
+</div>
+
+<div class="studyems012" id="search01con1">
+    <div class="studyems013">
+        <p class="studyems014" onMouseOver="search01s(1);" style="cursor:pointer;">课程</p>
+        <p class="studyems014a" onMouseOver="search01s(2);" style="cursor:pointer;">学校</p>
+        <p class="studyems014a" onMouseOver="search01s(3);" style="cursor:pointer;">老师</p>
+    </div>
+    <form name="mysearch" method="post" action="/search/">
+        <div class="studyems013">
+            <div class="studyems015">
+                <div class="studyems016">
+                    <p class="studyems017"></p>
+                    <p class="studyems018">
+                        <input type="text" class="studyems023" value="请输入您需要搜索的课程名称？" name="keywords" onFocus="javascript:if(keywords.value=='请输入您需要搜索的课程名称？') {keywords.value=''}" onBlur="javascript:if (keywords.value==''){keywords.value='请输入您需要搜索的课程名称？'}">
+                    </p>
+                </div>
+                <div class="studyems019">
+                    <input type="image" src="http://www.studyems.com/2016/images/tu03.jpg">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="studyems012" id="search01con2" style="display:none;">
+    <div class="studyems013">
+        <p class="studyems014a" onMouseOver="search01s(1);" style="cursor:pointer;">课程</p>
+        <p class="studyems014" onMouseOver="search01s(2);" style="cursor:pointer;">学校</p>
+        <p class="studyems014a" onMouseOver="search01s(3);" style="cursor:pointer;">老师</p>
+    </div>
+    <form name="mysearch" method="post" action="/search/school.php">
+        <div class="studyems013">
+            <div class="studyems015">
+                <div class="studyems016">
+                    <p class="studyems017"></p>
+                    <p class="studyems018">
+                        <input type="text" class="studyems023" value="请输入您需要搜索的学校名称？" name="keywords" onFocus="javascript:if(keywords.value=='请输入您需要搜索的学校名称？') {keywords.value=''}" onBlur="javascript:if (keywords.value==''){keywords.value='请输入您需要搜索的学校名称？'}">
+                    </p>
+                </div>
+                <div class="studyems019">
+                    <input name="" type="image" src="http://www.studyems.com/2016/images/tu03.jpg">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="studyems012" id="search01con3" style="display:none;">
+    <div class="studyems013">
+        <p class="studyems014a" onMouseOver="search01s(1);" style="cursor:pointer;">课程</p>
+        <p class="studyems014a" onMouseOver="search01s(2);" style="cursor:pointer;">学校</p>
+        <p class="studyems014" onMouseOver="search01s(3);" style="cursor:pointer;">老师</p>
+    </div>
+    <form name="mysearch" method="post" action="/search/teacher.php">
+        <div class="studyems013">
+            <div class="studyems015">
+                <div class="studyems016">
+                    <p class="studyems017"></p>
+                    <p class="studyems018">
+                        <input type="text" class="studyems023" value="请输入您需要搜索的老师姓名？" name="keywords" onFocus="javascript:if(keywords.value=='请输入您需要搜索的老师姓名？') {keywords.value=''}" onBlur="javascript:if (keywords.value==''){keywords.value='请输入您需要搜索的老师姓名？'}">
+                    </p>
+                </div>
+                <div class="studyems019">
+                    <input name="" type="image" src="http://www.studyems.com/2016/images/tu03.jpg">
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="studyems020">
+    <p class="studyems022">
+        <strong>
+            <a href="http://www.studyems.com/login.html" target="_blank">免费培训信息发布</a>
+        </strong>
+    </p>
+</div>

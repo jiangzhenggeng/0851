@@ -1,0 +1,247 @@
+*{
+    margin:0;
+    padding:0;
+}
+li{
+    list-style: none;
+}
+img{
+    border:none;
+}
+body{
+    background: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    font-family: "宋体";
+    background: url(images/headTop.jpg?v=201501261926) top center no-repeat;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.global-main{
+    width: 1000px;
+    margin: auto;
+    display: block;
+    clear: both;
+}
+.global-clear:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.ft-12{
+    font-size: 12px;
+}
+.ft-16{
+    font-size: 16px;
+}
+.tc{
+    text-align: center;
+}
+.global-header-top{
+    height: 110px;
+    overflow: hidden;
+    display: block;
+    margin-top: 30px;
+}
+
+.global-header-top img{
+    height: 110px;
+}
+
+.global-nav-warp .global-nav-ul li{
+    display:inline-block;
+    width: 111px;
+    line-height: 35px;
+    text-align: center;
+}
+
+.global-nav-warp .global-nav-ul{
+     background: #3c80c4;
+ }
+.global-nav-warp .global-nav-ul li {
+    position: relative;
+}
+.global-nav-warp .global-nav-ul li:after {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    top:50%;
+    margin-top: -10px;
+    height: 20px;
+    width: 1px;
+    background: #2a70b5;
+}
+.global-nav-warp .global-nav-ul li:first-child:after {
+    display: none;
+}
+
+.global-nav-warp .global-nav-ul li a{
+    display: block;
+}
+.global-nav-warp .global-nav-ul li a:hover,
+.global-nav-warp .global-nav-ul li a.on{
+    background: #114a86;
+}
+
+.global-nav-warp .global-nav-ul li span{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 0 5px;
+}
+
+.pd-5{
+    padding: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+.global-footer{
+    background: #ebebeb;
+    min-height: 130px;
+    width: 100%;
+    padding: 20px 0;
+}
+
+.global-footer .global-main.list{
+    text-align: center;
+    font-size: 14px;
+}
+.global-footer .global-main.list a{
+    margin: 7px;
+    position: relative;
+}
+.global-footer .global-main.list a i{
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 1px;
+    background: #424242;
+    left: -9px;
+    top: 0;
+}
+.global-footer .global-main.list a:first-child i{
+    display: none;
+}
+
+
+.line-kefu{
+    border: 1px #69a1ff solid;
+    background: #000 url(http://2.ss.faisys.com/image/materialLib/background/1000030.jpg) repeat center;
+}
+.line-kefu .inner{
+    padding: 5px;
+}
+
+.show-header {
+    background:#f0f0f0 url(http://2.ss.faisys.com/image/template/14001/mainform_l.png?v=201501261926) no-repeat 5px center;
+    line-height: 34px;
+    font-size: 14px;
+    text-indent: 25px;
+    margin-bottom: 20px;
+    border-bottom: 1px dotted #ccc;
+}
+.show-header span{
+    display: block;
+    background: #f0f0f0 url(http://2.ss.faisys.com/image/template/14001/mainform_l.png?v=201501261926) no-repeat 5px center;
+}
+.show-infor{
+    text-align: center;
+    font-size: 13px;
+    line-height: 26px;
+    margin: 15px 0 5px 0;
+    border-bottom: 1px dotted #ccc;
+}
+
+.show-title h1{
+    line-height: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+.show-content-warp{
+    border: 1px solid #e0e0e0;
+}
+.show-content{
+    font-size: 14px;
+    line-height: 200%;
+    font-family: 微软雅黑, 'microsoft yahei', 宋体, 新宋体, sans-serif;
+    padding: 10px;
+}
+
+em{
+    font-style: normal;
+}
+.inner-item a{
+    display: block;
+    margin: 10px;
+    color: #ff0000;
+    font-weight: bold;
+    font-size:14px;
+    line-height: 23px;
+}
+.serOnline-img3.qqImg3{
+    display: inline-block;
+    width: 81px;
+    height: 23px;
+    background: url(http://2.ss.faisys.com/image/qq/pa3.gif) no-repeat left center;
+    margin-right: 10px;
+}
+.inner-item-i {
+    border-top:1px solid #000;
+    margin-bottom: 15px;
+}
+.inner-item-i .link-p{
+    line-height: 30px;
+}
+.inner-item-i .link-title{
+    color: #001e4d;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 40px;
+    text-indent: 35px;
+}
+.inner-item-i .time{
+    background: url(http://2.ss.faisys.com/image/site/serviceOnlineTime1.png?v=201406161741) no-repeat left center;
+}
+
+.inner-item-i .fangshi{
+    background: url(http://2.ss.faisys.com/image/site/serviceOnlineCall.png?v=201406161741) no-repeat left center;
+}
+
+.text-c{
+    text-align: center;
+}
+.mg_t20{
+    margin-top: 20px;
+}
+#pages a{
+    border: 1px solid #e2e2e2;
+    padding: 5px 8px;
+    background: #f0f0f0;
+}
+
+#pages span{
+    padding: 5px 8px;
+}
+
+.bdshare-button-style0-16 {
+    zoom: 1;
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    top: 8px;
+    left: 8px;
+}

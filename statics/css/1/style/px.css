@@ -1,0 +1,694 @@
+@charset "gb2312";
+H1 {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.px001 {
+    float: left;
+    width: 93px;
+    height: 33px;
+    background-image: url(images/px001.jpg);
+}
+
+.px001 a:link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.px001 a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.px001 a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.px001 p {
+    width: 93px;
+    margin-top: 7px;
+    margin-left: 13px;
+    color: #FFFFFF;
+}
+
+.px001a {
+    float: left;
+    width: 93px;
+    height: 33px;
+    margin-left: 8px;
+    background-image: url(images/px001.jpg);
+}
+
+.px001a a:link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.px001a a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.px001a a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.px001a p {
+    width: 93px;
+    margin-top: 7px;
+    margin-left: 13px;
+    color: #FFFFFF;
+}
+
+.px002 {
+    float: left;
+    width: 93px;
+    height: 33px;
+    margin-left: 8px;
+    background-image: url(images/px002.jpg);
+}
+
+.px002 p {
+    width: 93px;
+    margin-top: 7px;
+    margin-left: 13px;
+}
+
+.px002a {
+    float: left;
+    width: 93px;
+    height: 33px;
+    margin-left: 0px;
+    background-image: url(images/px002.jpg);
+}
+
+.px002a p {
+    width: 93px;
+    margin-top: 7px;
+    margin-left: 13px;
+}
+
+.px003 {
+    float: left;
+    width: 693px;
+    margin-left: 8px;
+    _margin-left: 4px;
+    margin-top: 10px;
+}
+
+.px004 {
+    float: left;
+    width: 693px;
+    margin-top: 15px;
+    border-bottom: 1px dashed #eaeaea;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.px005 {
+    float: left;
+    width: 470px;
+    margin-top: 10px;
+}
+
+.px006 {
+    float: left;
+    width: 683px;
+    font-size: 15px;
+    text-align: left;
+    line-height: 25px;
+    margin-left: 10px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.px006 a:link {
+    text-decoration: none;
+    color: #261cdc;
+}
+
+.px006 a:visited {
+    text-decoration: none;
+    color: #261cdc;
+}
+
+.px006 a:hover {
+    color: #ff0000;
+}
+
+.px007 {
+    float: left;
+    width: 683px;
+    margin-top: 8px;
+}
+
+.px007 p {
+    float: left;
+    margin-right: 15px;
+}
+
+.px007a {
+    color: #003399;
+}
+
+.px007a a:link {
+    text-decoration: none;
+    color: #003399;
+}
+
+.px007a a:visited {
+    text-decoration: none;
+    color: #003399;
+}
+
+.px007a a:hover {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.px008 {
+    float: left;
+    width: 60px;
+    text-align: left;
+    line-height: 25px;
+    color: #064683;
+}
+
+.px009 {
+    float: left;
+    height: 18px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FF0000;
+    padding: 3px;
+    background-color: #ffcdcf;
+}
+
+.px010 {
+    float: left;
+    width: 320px;
+    text-align: left;
+    line-height: 25px;
+    margin-left: 10px;
+}
+
+.px011 {
+    float: left;
+    text-align: left;
+    line-height: 22px;
+}
+
+.px012 {
+    float: right;
+    width: 100px;
+    margin-top: 10px;
+}
+
+.px013 {
+    float: left;
+    width: 87px;
+}
+
+.px014 {
+    float: left;
+    width: 87px;
+    margin-top: 5px;
+}
+
+#emsa01 {
+    color: #FF0000;
+    font-weight: bold;
+}
+
+.list024 {
+    float: left;
+    width: 95px;
+    height: 65px;
+    margin-left: 5px;
+    margin-top: 10px;
+    background-image: url(images/digg_blue.gif);
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.list025 {
+    float: left;
+    width: 80px;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.list026 {
+    float: left;
+    width: 80px;
+    margin-top: 16px;
+    color: #FF6600;
+    font-weight: bold;
+}
+
+.library001 {
+    float: left;
+    width: 998px;
+    margin-top: 10px;
+}
+
+.library002 {
+    float: left;
+    width: 996px;
+    margin-top: 5px;
+}
+
+.library003 {
+    float: left;
+    width: 996px;
+    margin-top: 10px;
+    border: 1px solid #e6e6e6;
+    background-color: #FFFFFF;
+    padding-bottom: 15px;
+}
+
+.library004 {
+    float: left;
+    width: 970px;
+    margin-top: 15px;
+    margin-left: 12px;
+    _margin-left: 6px;
+}
+
+.library005 {
+    float: left;
+    width: 970px;
+}
+
+.library006 {
+    float: left;
+    width: 960px;
+    padding-left: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+    border-bottom: 1px solid #e7e7e7;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+
+.library007 {
+    float: left;
+    width: 960px;
+    margin-top: 10px;
+}
+
+.library008 {
+    float: left;
+    width: 110px;
+    margin-left: 10px;
+    _margin-left: 5px;
+    background-image: url(images/library-tu01.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px 9px;
+}
+
+.library008 p {
+    float: left;
+    font-size: 14px;
+    margin-left: 8px;
+    _margin-left: 4px;
+    text-align: left;
+    line-height: 24px;
+}
+
+.library009 {
+    float: left;
+    width: 970px;
+    height: 1px;
+    margin-top: 10px;
+    border-bottom: 1px dashed #e7e7e7;
+    overflow: hidden;
+}
+
+.library010 {
+    float: left;
+    width: 970px;
+}
+
+.library011 {
+    float: left;
+}
+
+.library012 {
+    float: left;
+    width: 348px;
+    margin-top: 10px;
+}
+
+.library013 {
+    float: left;
+    width: 348px;
+    height: 29px;
+    background-image: url(images/library-tu03.jpg);
+}
+
+.library014 {
+    float: left;
+    margin-left: 15px;
+    _margin-left: 7.5px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.library015 {
+    float: right;
+    color: #FFFFFF;
+    margin-top: 8px;
+    margin-right: 10px;
+    _margin-right: 5px;
+}
+
+.library015 a:link {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.library015 a:visited {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.library015 a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.library016 {
+    float: left;
+    width: 346px;
+    border-right: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    border-left: 1px solid #e3e3e3;
+    padding-bottom: 5px;
+}
+
+.library017 {
+    float: left;
+    width: 330px;
+    margin-top: 10px;
+    margin-left: 8px;
+    _margin-left: 4px;
+}
+
+.library018 {
+    float: left;
+    width: 330px;
+    text-align: left;
+    line-height: 24px;
+    font-size: 14px;
+}
+
+.library019 {
+    float: left;
+    width: 240px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.library020 {
+    float: left;
+    width: 80px;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.library021 {
+    float: left;
+    width: 348px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.library022 {
+    float: right;
+    width: 250px;
+}
+
+.library023 {
+    float: left;
+    width: 250px;
+    margin-top: 10px;
+}
+
+.library024 {
+    float: left;
+    width: 250px;
+}
+
+.library025 {
+    float: left;
+    width: 250px;
+    margin-top: 5px;
+}
+
+.library026 {
+    float: left;
+    width: 250px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.library027 {
+    float: left;
+    width: 250px;
+    margin-top: 8px;
+}
+
+.library027 ul {
+    float: left;
+    width: 250px;
+    font-size: 13px;
+    text-align: left;
+    line-height: 22px;
+}
+
+.library027 li {
+    float: left;
+    width: 250px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.teacher001 {
+    float: left;
+    width: 970px;
+}
+
+.teacher002 {
+    float: left;
+    width: 60px;
+    margin-top: 15px;
+}
+
+.teacher003 {
+    margin-top: 10px;
+    text-align: left;
+    line-height: 22px;
+}
+
+.teacher004 {
+    margin-top: 10px;
+}
+
+.teacher005 {
+    height: 33px;
+    background-image: url(images/teacher-tu01.jpg);
+}
+
+.teacher006 {
+    float: left;
+    width: 120px;
+    height: 33px;
+    background-image: url(images/teacher-tu02.jpg);
+}
+
+.teacher006 p {
+    width: 120px;
+    margin-top: 8px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.teacher007 {
+    border-right: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+    border-left: 1px solid #ededed;
+    padding-bottom: 20px;
+}
+
+.teacher008 {
+    margin-left: 8px;
+    _margin-left: 4px;
+    margin-top: 10px;
+    border-bottom: 1px dashed #e1e2e2;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+.teacher009 {
+    float: left;
+    width: 120px;
+    margin-left: 5px;
+    _margin-left: 2.5px;
+}
+
+.teacher010 {
+    float: left;
+    width: 555px;
+    margin-left: 10px;
+}
+
+.teacher011 {
+    float: left;
+    width: 555px;
+}
+
+.teacher012 {
+    float: left;
+    width: 450px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.teacher013 {
+    float: right;
+    width: 97px;
+    height: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 4px;
+    background-image: url(images/teacher-tu04.jpg);
+}
+
+.teacher014 {
+    float: left;
+    width: 555px;
+    text-align: left;
+    line-height: 24px;
+    color: #999999;
+}
+
+.teacher015 {
+    float: left;
+    width: 693px;
+    margin-left: 8px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/*Æ·ÅÆ»ú¹¹*/
+.index004 {
+    float: left;
+    width: 998px;
+    margin-top: 10px;
+}
+
+.index030 {
+    float: left;
+    width: 998px;
+    height: 35px;
+    background-color: #c00000;
+}
+
+.index030a {
+    float: left;
+    margin-top: 9px;
+    margin-left: 18px;
+    _margin-left: 9px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.index030b {
+    float: right;
+    color: #FFFFFF;
+    margin-right: 15px;
+    _margin-right: 7.5px;
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+.index031 {
+    float: left;
+    width: 996px;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    background-color: #FFFFFF;
+    padding-bottom: 10px;
+}
+
+.index032 {
+    float: left;
+    width: 996px;
+    margin-top: 10px;
+}
+
+.index032a {
+    float: left;
+    width: 970px;
+    margin-left: 12px;
+    _margin-left: 6px;
+}
+
+.index033 {
+    float: left;
+    width: 16px;
+    margin-left: 15px;
+    _margin-left: 7.5px;
+    margin-top: 45px;
+}
+
+.index034 {
+    float: left;
+    width: 160px;
+    margin-left: 15px;
+    border: 1px solid #ebebeb;
+    padding: 1px;
+}
+
+.index034 p {
+    float: left;
+    width: 160px;
+}
+
+.index035 {
+    float: left;
+    margin-left: 10px;
+    _margin-left: 5px;
+    margin-top: 10px;
+}
+
+.index035 ul {
+    line-height: 25px;
+}
+
+.index035 li {
+    float: left;
+    width: 175px;
+    padding-left: 13px;
+    background-image: url(images/index-tu018.jpg);
+    background-repeat: no-repeat;
+    background-position: 0px 7px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

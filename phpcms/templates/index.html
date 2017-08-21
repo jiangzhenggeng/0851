@@ -1,0 +1,13 @@
+<script>
+    var script = document.createElement('script');
+    script.setAttribute('src','http://cdn.jiguo.com/static/Pc/compression_2.4/script/lib/jquery-1.12.3.min.js');
+    script.onload = function () {
+        var str = '';
+        $('.library007 a').each(function () {
+            str += $(this).html() + "\r\n";
+        });
+        console.log(str);
+    }
+    document.getElementsByTagName('head')[0].appendChild(script);
+
+</script>

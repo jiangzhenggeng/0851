@@ -1,0 +1,45 @@
+
+.show-kaoshi .title{
+    text-align: center;
+}
+.show-kaoshi .content{
+    font-size: 16px;
+    line-height: 26px;
+}
+.show-kaoshi .content a{
+    text-indent: 2em;
+}
+
+.main-le-a h1{text-align: center;font-size: 26px}
+.main-le-a-time{margin:20px 0 30px;text-align: center}
+.main-le-a-time span{margin:0 20px;}
+.main-le-a-time span em{color:#ef4245;}
+.main-le-a-time span i{color:#4a73fa;}
+
+
+.main-ri{float: right;width: 300px;background-color: #fff}
+.main-ri-to{    background: #fff;;border:1px solid #dddddd;padding:0 15px;margin-bottom: 15px}
+.main-ri-to li{padding:15px 0 13px;border-bottom: 1px dashed #dddddd;overflow: hidden;text-overflow:ellipsis;white-space:nowrap;}
+.main-ri-to li:first-child{
+    border-bottom: 1px solid #dddddd;
+    font-size: 16px;
+    position: relative;
+    overflow: visible;
+}
+.main-ri-to li:first-child:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -15px;
+    width: 3px;
+    height: 15px;
+    top: 19px;
+    background-color: #ef4245;
+}
+.main-ri-to li:first-child .right{font-size: 12px}
+.main-ri-ce-to,
+.main-ri-to li:last-child{border-bottom: none}
+.main-ri-to li a:hover{text-decoration: underline;}
+
+
+

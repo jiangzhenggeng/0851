@@ -1,0 +1,130 @@
+{template "content","_header"}
+
+<link href="{CSS_PATH}gzsjqt/course-details.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}gzsjqt/show-shool.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}gzsjqt/main1119.css" rel="stylesheet" type="text/css">
+
+<div id="jq_position" class="auto weizhi">
+    <a href="{siteurl($siteid)}"><i class="fa fa-home"></i>网站首页</a> &gt; {catpos($catid)} > <a href="{$url}">{$title}</a>
+</div>
+
+<div class="auto clearfix">
+    <!--main-->
+    <div class="main">
+        <div class="main-a">
+            <div class="main-a-ce clearfix">
+                <img class="lazy" src="<?php echo $thumb?$thumb:DEF_IMG;?>" data-original="<?php echo $thumb?$thumb:DEF_IMG;?>" style="display: block;">
+                <div class="ce-ri">
+                    <div>
+                        <h3>{$title}<img src="http://www.studyems.com/statics/images/s3.png"></h3>
+                    </div>
+                    <p>主营业务：{$business}</p>
+                    <p>办学特色：{$features}</p>
+                    <p>学校地址：{$address}</p>
+                    <p>咨询电话：<strong>{$phone}</strong>
+                        <a href="http://wpa.qq.com/msgrd?v=3&amp;uin={$qq}&amp;site=黔通教育&amp;menu=yes" target="_blank"><img src="http://www.studyems.com/statics/images/s4.gif"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-b">
+            <div class="marg">
+                <ul class="main-b-to clearfix" id="go-all">
+                    <li class="list new" data-href="go1">机构介绍</li>
+                    <li class="list" data-href="go2">机构课程</li>
+                    <li class="list" data-href="go3">机构地图</li>
+                </ul>
+            </div>
+            <script>
+                $('#go-all').on('click','li',function () {
+                    $('#go-all').find('.new').removeClass('new');
+                    $(this).addClass('new');
+                    $(window).scrollTop( $('#'+$(this).attr('data-href')).offset().top );
+                });
+            </script>
+            <div class="main-b-1 course-information" id="go1">
+                <div class="title"><span></span>机构介绍</div>
+                <div class="show-content dagang">{$content}</div>
+            </div>
+            <div class="main-b-1" id="go2">
+                <div class="title"><span></span>机构课程</div>
+                <?php $sql = 'select * from phpcms_news where shoolid = '.$id;?>
+                {pc:get sql="$sql" num="20"}
+                <ol class="kecheng">
+                    {loop $data $r}
+                    <li class="clearfix">
+                        <span class="ol-a"><a href="{$r[url]}">{$r[title]}</a></span>
+                        <span class="ol-b" style="margin-top:2px !important;">更新时间：{date('Y-m-d',$r[inputtime])}</span>
+                        <span class="ol-c">面议</span>
+                        <span class="ol-d">开课日期：随到随学</span>
+                        <span class="ol-e"><a href="{$r[url]}">立即查看  </a></span>
+                    </li>
+                    {/loop}
+                </ol>
+                {/pc}
+            </div>
+            <div class="main-b-1" id="go3">
+                <div name="anchorMap" id="anchorMap" class="title"><span></span>机构地图</div>
+                <div class="ditu clearfix">
+                    <div class="left">
+                        <div id="container" style="overflow: hidden; background-color: rgb(243, 241, 236); color: rgb(0, 0, 0); text-align: left; z-index: 0;">
+                            {$map}
+                        </div>
+                    </div>
+                    <div class="right">
+                        <form id="myMapForm" action="http://api.map.baidu.com/direction?output=html&amp;mode=transit&amp;src=http://www.studyems.com/baidu_map_jsapi" method="post" target="_blank">
+                            <input type="hidden" name="region" value="广州">
+                            <input type="hidden" name="destination" value="{$address}">
+                            <h4>学校地址</h4>
+                            <p>{$address}</p>
+                            <p class="xian"></p>
+                            <h4>查询学校路线</h4>
+                            <p>选择出行方式：<label><input type="radio" name="trip" value="1" checked=""> 公交</label> <label><input type="radio" name="trip" value="2"> 驾车</label></p>
+                            <p class="mar">选择出发地：<input type="text" name="origin" class="text"><button type="submit">查询</button></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main-->
+    <!--saide-->
+    <div class="saide">
+        <div class="saide-b xinwen">
+            <div class="saide-b-to clearfix"><p><span>new</span>新闻资讯</p><a href="{$CATEGORYS[453][url]}">更多</a></div>
+            {pc:content action="relation" relation="$relation" catid="$catid" num="5" keywords="$rs[keywords]"}
+            <ul>
+                {loop $data $k $r}
+                <li>
+                    <p><a href="{$r[url]}">{$r[title]}</a></p>
+                    <span>{date('Y-m-d',$r[inputtime])}</span>
+                </li>
+                {/loop}
+            </ul>
+            {/pc}
+        </div>
+        <div class="saide-a baoming">
+            <p class="saide-a-p"><span>课程定制</span></p>
+            <form id="baomingForm2" action="{APP_PATH}index.php?m=member&c=post&a=apply" method="post">
+                <ul>
+                    <li>
+                        <input type="text" name="apply[name]" class="sky sky4" placeholder="您的姓名">
+                    </li>
+                    <li>
+                        <input type="text" name="apply[tel]" class="sky sky3" placeholder="您的手机号码">
+                    </li>
+                    <li>
+                        <textarea name="apply[content]" placeholder="想学课程"></textarea>
+                    </li>
+                    <li>
+                        <button type="submit" class="checkForm">立即报名</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+{template "content","_footer"}

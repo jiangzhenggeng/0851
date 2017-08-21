@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+	<!--<base target="_blank"/>-->
+	<script src="{JS_PATH}jquery.min.js" type="text/javascript"></script>
+	<script src="{JS_PATH}jquery.cookie.js" type="text/javascript"></script>
+	<script src="{CSS_PATH}gzsjqt/js/uaredirect.js" type="text/javascript"></script>
+	<script type="text/javascript">uaredirect('http://m.studyems.com/');</script>
+	<link href="http://www.studyems.com/favicon.ico" rel="icon" type="text/x-icon">
+	<link href="{CSS_PATH}gzsjqt/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="{CSS_PATH}gzsjqt/common.css" rel="stylesheet" type="text/css">
+	<link href="{CSS_PATH}gzsjqt/index.css" rel="stylesheet" type="text/css">
+	<script src="{CSS_PATH}gzsjqt/js/jquery-1.11.0.min.js"></script>
+</head>
+<body>
+
+<!--公共头部-->
+<?php $memberinfo = get_memberinfo($_userid);?>
+<div class="top-outer">
+	<div class="top">
+		<div class="top-left">
+			<a id="gohome" href="/"><i class="fa fa-home"></i> 首页</a>
+			欢迎来到黔通教育！
+			<span>今天是 {date('Y年m月d号 H:i:s')}，我们虔诚为您服务！</span>
+		</div>
+		{if $_userid}
+		<div class="top-right">
+			你好 {get_nickname()}<span> | </span>
+			<a href="{APP_PATH}index.php?m=member&c=index&a=logout">退出</a>
+			<span> | </span><a href="{$siteinfo['domain']}">首页</a>
+		</div>
+		{/if}
+	</div>
+</div>
+
+<div class="common-head-outer">
+	<div class="common-head">
+		<div class="common-head-left">
+			<a href="{APP_PATH}" style="float:left;margin-left:0;">
+				<h1><img src="{CSS_PATH}gzsjqt/images/logo.jpg"></h1>
+			</a>
+
+			{pc:get sql="SELECT * FROM  phpcms_model_field where fieldid=217" return="data_val"}
+			{/pc}
+			<?php $data_val = json_decode($data_val[0][setting],true);?>
+			<?php $options = explode(PHP_EOL,$data_val[options]);?>
+			{loop $options $k $v}
+				<?php
+					$option = explode('|',$v);
+					$areaid=AREAID;
+					if(intval($option[1])==$areaid){
+						$all_site = $option;
+					}
+				?>
+			{/loop}
+			<div class="map-outer">
+				<span><?php echo isset($all_site[0])?$all_site[0]:'总站';?> <i class="fa fa-angle-down"></i></span>
+				<div class="float-map">
+					<p class="float-map-top"><?php echo isset($all_site[0])?$all_site[0]:'总站';?> <i class="fa fa-angle-down"></i></p>
+					<div>
+						<ul>
+							{loop $options $k $v}
+							<?php $option = explode('|',$v);$areaid=AREAID;?>
+							<li><a target="_self" {if intval($option[1])==$areaid}style="color:#dc201e"{/if} href="{APP_PATH}index.php?areaid={$option[1]}">{$option[0]}</a></li>
+							{/loop}
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="common-head-center">
+			<div class="search-tab">
+				<p {if $typeid==57}id="search-tab-active"{/if} data-name="课程名称" data-url="{APP_PATH}index.php" data-typeid="57">课程</p>
+				<p {if $typeid==54}id="search-tab-active"{/if} data-name="学校名称" data-url="{APP_PATH}index.php" data-typeid="54">学校</p>
+				<p {if $typeid==55}id="search-tab-active"{/if} data-name="资讯关键词" data-url="{APP_PATH}index.php" data-typeid="55">资讯</p>
+			</div>
+			<form class="search-outer" method="get" action="{APP_PATH}index.php">
+				<p></p>
+				<input type="text" class="search-inp" name="q" value="请输入您要搜索的课程名称">
+				<button type="submit">搜 索</button>
+
+				<input type="hidden" name="m" value="search"/>
+				<input type="hidden" name="c" value="index"/>
+				<input type="hidden" name="a" value="init"/>
+				<input type="hidden" name="typeid" id="typeid" value="<?php echo $typeid?$typeid:57;?>"/>
+			</form>
+			<div class="search-hot">
+				<ul >
+					{php $_param_='typeid=57&m=search&c=index&a=init';}
+					<a href="{APP_PATH}index.php?q=成考&{$_param_}">成考</a>
+					<a href="{APP_PATH}index.php?q=广东学而好{$_param_}">广东学而好</a>
+					<a href="{APP_PATH}index.php?q=学而好{$_param_}">学而好</a>
+					<a href="{APP_PATH}index.php?q=会计{$_param_}">会计</a>
+					<a href="{APP_PATH}index.php?q=会计培训{$_param_}">会计培训</a>
+				</ul>
+				<ul style="display:none;">
+				</ul>
+				<ul style="display:none;">
+				</ul>
+			</div>
+		</div>
+		<div class="common-head-right">
+			<a href="{APP_PATH}index.php?m=member&c=content&a=publish&op=kc&keep_catid=12&catid=12"><i class="fa fa-edit"></i> 免费发布课程</a>
+		</div>
+	</div>
+</div>
+
+<div class="nav-outer">
+	<div class="nav">
+		<p>{if $index}所有课程分类{/if}</p>
+		<a target="_self" href="/" {if !isset($_type)}style="color: rgb(220, 32, 30);"{/if}><h2>首页</h2></a>
+		<a target="_self" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=12" {if $_type=='kc'}style="color: rgb(220, 32, 30);"{/if}><h2>培训课程</h2></a>
+		<a target="_self" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=25" {if $_type=='xx'}style="color: rgb(220, 32, 30);"{/if}><h2>培训学校</h2></a>
+		<a target="_self" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=385" {if $catid==385}style="color: rgb(220, 32, 30);"{/if}><h2>考试咨询</h2></a>
+		<a target="_self" href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=453" {if $catid==453}style="color: rgb(220, 32, 30);"{/if}>新闻动态</a>
+	</div>
+</div>
+{if !$index}
+<div class="layout">
+	<div class="menu-outer">
+		<p class="all-type">所有课程分类</p>
+		{template "content","_category"}
+	</div>
+</div>
+{/if}

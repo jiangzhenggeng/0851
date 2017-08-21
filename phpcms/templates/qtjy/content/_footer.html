@@ -1,0 +1,60 @@
+
+<div class="link">
+    <div class="link-left"></div>
+    <div class="link-right">
+        {pc:link  action="type_list" order="listorder DESC" num="999" return="pic_link"}
+        {loop $pic_link $v}
+        <a href="{$v['url']}">{$v['name']}</a>
+        {/loop}
+        {/pc}
+    </div>
+</div>
+
+<?php $cat_arra = array(427,428,429,430,431);?>
+<div class="friend-link-bg">
+    <div class="friend-link">
+        {loop $cat_arra $v}
+        <div>
+            <p>{$CATEGORYS[$v][catname]}</p>
+            {pc:content action="category" catid="$v"}
+            <ul>
+                {loop $data $k2 $v2}
+                <li><a rel="nofollow" href="{$v2[url]}">{$v2[catname]}</a></li>
+                {/loop}
+            </ul>
+            {/pc}
+        </div>
+        {/loop}
+        <p class="friend-link-p">
+            <span>官方微信公众号</span>
+            <img src="{CSS_PATH}gzsjqt/public/studyems.jpg">
+        </p>
+    </div>
+</div>
+
+<div class="footer">
+    <div>版权所有 CopyRight 2008-2017 粤ICP备14009694号 www.studyems.com, Inc. All Rights Reserved</div>
+</div>
+
+<script src="{CSS_PATH}gzsjqt/js/common.js"></script>
+<script src="{CSS_PATH}gzsjqt/js/jquery.form.min.js"></script>
+<script>
+    $(function(){
+        //切换城市
+        $(".map-outer").hover(function(){
+            $(".float-map").show();
+        },function(){
+            $(".float-map").hide();
+            $(".city-search").hide();
+        });
+    });
+</script>
+
+<script src="{CSS_PATH}gzsjqt/js/lazyload.js"></script>
+<script src="{CSS_PATH}gzsjqt/js/index.js"></script>
+<script>
+    $(".lazy").lazyload({effect: "fadeIn"});
+</script>
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+</body>
+</html>

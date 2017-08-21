@@ -1,0 +1,71 @@
+{template "content","header"}
+<link href="./public/index.css" rel="stylesheet" type="text/css" />
+<link href="./public/show.css" rel="stylesheet" type="text/css" />
+
+<div class="global-main index-body global-clear">
+	<div class="index-left-silder fl">
+		{template "content","left"}
+	</div>
+	<div class="index-right-silder fr">
+		<div class="index-right-cell index-share global-clear" style="margin-top: 0">
+			<div class="shar-header">分享网站</div>
+			{template "content","shar"}
+		</div>
+
+		<div class="mt-10 show-content-warp">
+			<div class="show-header">
+				<span>新闻详情</span>
+			</div>
+			<div class="show-warp">
+				<div class="show-title">
+					<div><h1>{$title}</h1></div>
+					<div class="show-infor">
+						{if $inputtime}<span>发布时间：</span>
+						<span>{date('Y-m-d',strtotime($inputtime))}</span>{/if}
+						<span>来源：</span>
+						<span>{if $copyfrom==''}<a target="_blank" href="/">黔通教育</a>{else}{$copyfrom}{/if}</span>
+						<span>浏览：</span>
+						<span id="hits"></span>
+						<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone"></a><a href="#" class="bds_tsina" data-cmd="tsina"></a><a href="#" class="bds_tqq" data-cmd="tqq"></a><a href="#" class="bds_renren" data-cmd="renren"></a><a href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+						<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+					</div>
+				</div>
+				<div class="show-content">{$content}</div>
+			</div>
+		</div>
+
+		<script language='javascript' src='{APP_PATH}index.php?m=formguide&c=index&a=show&formid=12&action=js&siteid=1'></script>
+
+
+
+		<div class="border mt-10 mb-10">
+			<div class="all-header list-title">
+				<span>{$CATEGORYS[25]['catname']}</span>
+				<a href="{$CATEGORYS[25][url]}" target="_blank" class="fr">更多</a>
+			</div>
+			<div class="list-warp">
+				<ul>
+					{pc:content action="lists" catid="25" num="20" order="id DESC"}
+					<ul class="global-nav-ul global-clear">
+						{loop $data $r}
+						<li>
+							<a href="{$r[url]}">
+								<span>{$r[title]}</span>
+								<div class="fr">
+									<span class="category">[{$CATEGORYS[$r[catid]][catname]}]</span>
+									<span class="time">{date('Y-m-d',$r['inputtime'])}</span>
+								</div>
+							</a>
+						</li>
+						{/loop}
+					</ul>
+					{/pc}
+				</ul>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+{template "content","footer"}

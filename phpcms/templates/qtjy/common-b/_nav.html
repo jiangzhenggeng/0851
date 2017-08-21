@@ -1,0 +1,12 @@
+<div class="main">
+    <div class="studyems024">
+        {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+        <ul class="global-nav-ul global-clear">
+            <li id="am"><a href="{siteurl($siteid)}"><span>首页</span></a></li>
+            {loop $data $r}
+                <li><a href="{$r[url]}"><span>{$r[catname]}</span></a></li>
+            {/loop}
+        </ul>
+        {/pc}
+    </div>
+</div>

@@ -1,0 +1,76 @@
+/* 本例子css */
+.picMarquee-left {
+    overflow: hidden;
+    position: relative;
+    margin: 1px;
+}
+.tempWrap{
+    width: 756px !important;
+}
+.picMarquee-left .hd {
+    overflow: hidden;
+    height: 30px;
+    background: #218100;
+    color: #fff;
+}
+
+.picMarquee-left .hd .prev, .picMarquee-left .hd .next {
+    display: block;
+    width: 5px;
+    height: 9px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url("images/arrow.png") no-repeat;
+}
+
+.picMarquee-left .hd .next {
+    background-position: 0 -50px;
+}
+
+.picMarquee-left .hd .prevStop {
+    background-position: -60px 0;
+}
+
+.picMarquee-left .hd .nextStop {
+    background-position: -60px -50px;
+}
+
+.picMarquee-left .bd {
+    padding: 10px;
+}
+
+.picMarquee-left .bd ul {
+    overflow: hidden;
+    zoom: 1;
+}
+
+.picMarquee-left .bd ul li {
+    margin: 0 8px;
+    float: left;
+    _display: inline;
+    overflow: hidden;
+    text-align: center;
+}
+
+.picMarquee-left .bd ul li .pic {
+    text-align: center;
+}
+
+.picMarquee-left .bd ul li .pic img {
+    width: 130px;
+    height: 150px;
+    display: block;
+    padding: 2px;
+    border: 1px solid #ccc;
+}
+
+.picMarquee-left .bd ul li .pic a:hover img {
+    border-color: #999;
+}
+
+.picMarquee-left .bd ul li .title {
+    line-height: 24px;
+}

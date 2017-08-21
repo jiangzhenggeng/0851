@@ -1,0 +1,96 @@
+<div class="index-left-cell pxxiangmu">
+    <div class="pxxiangmu-header">
+        <span>天气信息</span>
+    </div>
+    <iframe style="margin-left: -8px" allowtransparency="true" frameborder="0" width="210" height="100" scrolling="no" src="http://tianqi.2345.com/plugin/widget/index.htm?s=1&z=1&t=1&v=0&d=1&bd=0&k=&f=&q=1&e=1&a=1&c=54511&w=210&h=100&align=center"></iframe>
+</div>
+
+<div class="index-left-cell pxxiangmu mt-10">
+    <div class="pxxiangmu-header">
+        <span>{$CATEGORYS[12]['catname']}</span>
+    </div>
+    <div class="pxxiangmu-inner">
+        <ul>
+            {pc:content action="category" catid="12" num="50" siteid="$siteid" order="listorder ASC"}
+            <ul class="global-nav-ul global-clear">
+                {loop $data $r}
+                <li><a href="{$r[url]}"><span>{$r[catname]}</span></a></li>
+                {/loop}
+            </ul>
+            {/pc}
+        </ul>
+    </div>
+</div>
+
+<div class="index-left-cell pxxiangmu mt-10">
+    <div class="pxxiangmu-header">
+        <span>联系方式</span>
+    </div>
+    <div class="pxxiangmu-inner" style="background:#feffb9">
+        <div class="phone po1">
+            <p>贵阳公司</p>
+            <p>电 &nbsp;话：0851-85916018 0851-88531170</p>
+            <p>Q &nbsp; &nbsp;Q：95379570 95709692</p>
+            <p>地 &nbsp;址：北京路260号万科公园5号</p>
+        </div>
+        <div class="phone">
+            <p>凯里公司</p>
+            <p>电 &nbsp;话：0855-8233866</p>
+            <p>手机：18184523767 18184524767</p>
+            <p>地 &nbsp;址：凯里市大十字中银港503</p>
+        </div>
+    </div>
+</div>
+<style>
+    .phone.po1{
+        border-bottom: 1px solid #777777;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+</style>
+
+<div class="index-left-cell line-kefu mt-10">
+    <div class="all-header">
+        <span>在线客服</span>
+    </div>
+    <div class="inner">
+        <div class="inner-item">
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=95379570&amp;site=qq&amp;menu=yes" target="_blank">
+                <span class="serOnline-img3 qqImg3">&nbsp;</span><em>客服一</em>
+            </a>
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=95379570&amp;site=qq&amp;menu=yes" target="_blank">
+                <span class="serOnline-img3 qqImg3">&nbsp;</span><em>客服一</em>
+            </a>
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=95379570&amp;site=qq&amp;menu=yes" target="_blank">
+                <span class="serOnline-img3 qqImg3">&nbsp;</span><em>客服一</em>
+            </a>
+            <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=95379570&amp;site=qq&amp;menu=yes" target="_blank">
+                <span class="serOnline-img3 qqImg3">&nbsp;</span><em>客服一</em>
+            </a>
+        </div>
+
+        <div class="inner-item-i">
+            <div class="link-title time">工作时间</div>
+            <div class="link-p">
+                <p>周一至周五 ：9:00-17:30</p>
+                <p>周六至周日 ：9:30-17:00</p>
+            </div>
+        </div>
+        <!--<div class="inner-item-i">-->
+            <!--<div class="link-title fangshi">联系方式</div>-->
+            <!--<div class="link-p">-->
+                <!--<p>李老师：18185096467</p>-->
+                <!--<p>刘老师：18085148759</p>-->
+            <!--</div>-->
+        <!--</div>-->
+
+    </div>
+</div>
+
+
+<div class="index-left-cell line-kefu mt-10">
+    <iframe src="/phpcms/templates/qtjy/content/map.html" width="100%" height="220" frameborder="0"></iframe>
+</div>
+
+
+

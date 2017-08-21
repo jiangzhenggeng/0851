@@ -1,0 +1,193 @@
+
+{php $index=true;}
+
+{template "content","_header"}
+{template "content","_nav"}
+
+<div class="main">
+    {template "content","_category"}
+    <div class="slide-banner">
+        {pc:content  action="position" posid="2" order="listorder DESC" num="5"}
+        <ul class="index-banner-ul">
+            {loop $data $key $val}
+            <li class="index-banner-li"><a title="{$val['title']}" href="{$val['url']}"><img src="{$val['thumb']}"></a></li>
+            {/loop}
+        </ul>
+        {/pc}
+        <div class="banner-bottom-nav"></div>
+    </div>
+    {template "content","_banner_right"}
+</div>
+
+{template "content","_home_like"}
+
+
+<div class="tab">
+    <div class="tab-head">
+        <p><i class="fa fa-institution"></i>品牌机构</p>
+        <div data-action="jigou" class="tab-head-title">
+            <a href="{$CATEGORYS[25][url]}" style="float:right">更多>></a>
+        </div>
+    </div>
+    <div class="tab-body">
+        <div class="tab-content">
+            {pc:content  action="position" posid="19" order="listorder DESC" num="1"}
+            <div class="tab-content-l">
+                {loop $data $key $val}
+                <a href="{$val[url]}"><img class="lazy" src="{$val[thumb]}" data-original="{$val[thumb]}"></a>
+                {/loop}
+            </div>
+            {/pc}
+            <div class="tab-content-r">
+                <div>
+                    {pc:content  action="position" posid="20" order="listorder DESC" num="4"}
+                    {loop $data $r5}
+                    <a href="{$r5[url]}" class="active-bg">
+                        <img class="lazy" src="{thumb($r5[thumb],230,115)}" data-original="{thumb($r5[thumb],230,115)}">
+                        <div class="active-by"></div>
+                        <small>立即查看</small>
+                    </a>
+                    {/loop}
+                    {/pc}
+                </div>
+                <div class="content-r-text r-text-l">
+                    <p><span></span>热门机构推荐</p>
+                    <ul>
+                        {pc:content  action="position" posid="21" order="listorder DESC" num="5"}
+                        {loop $data $r5}
+                        <li>
+                            <a href="{$r5[url]}">{$r5[title]}</a>
+                            <img src="{CSS_PATH}gzsjqt/public/5.png" data-level="5">
+                            <a href="{$r5[url]}">立即查看</a>
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+                <div class="content-r-text r-text-r">
+                    <p><span></span>最高人气机构</p>
+                    <ul>
+                        {pc:content  action="position" posid="22" order="listorder DESC" num="5"}
+                        {loop $data $r5}
+                        <li>
+                            <a href="{$r5[url]}"> {$r5[title]}</a>
+                            <img src="{CSS_PATH}gzsjqt/public/5.png" data-level="5">
+                            <a href="{$r5[url]}">立即查看</a>
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab">
+    <div class="tab-head">
+        <p><i class="fa fa-book"></i>热门课程</p>
+        <div data-action="course" class="tab-head-title">
+            <a href="{$CATEGORYS[12][url]}" style="float:right">更多>></a>
+        </div>
+    </div>
+    <div class="tab-body">
+        <div class="tab-content">
+            {pc:content  action="position" posid="23" order="listorder DESC" num="1"}
+            <div class="tab-content-l">
+                {loop $data $key $val}
+                <a href="{$val[url]}"><img class="lazy" src="{$val[thumb]}" data-original="{$val[thumb]}"></a>
+                {/loop}
+            </div>
+            {/pc}
+
+            <div class="tab-content-r">
+                <div>
+                    {pc:content  action="position" posid="24" order="listorder DESC" num="4"}
+                    {loop $data $r5}
+                    <a href="{$r5[url]}" class="active-bg">
+                        <img class="lazy" src="{thumb($r5[thumb],230,115)}" data-original="{thumb($r5[thumb],230,115)}">
+                        <div class="active-by"></div>
+                        <small>立即查看</small>
+                    </a>
+                    {/loop}
+                    {/pc}
+                </div>
+                <div class="content-r-text r-text-l">
+                    <p><span></span>热门课程推荐</p>
+                    <ul>
+                        {pc:content  action="position" posid="25" order="listorder DESC" num="5"}
+                        {loop $data $r5}
+                        <li>
+                            <a href="{$r5[url]}">{$r5[title]}</a>
+                            <img src="{CSS_PATH}gzsjqt/public/5.png" data-level="5">
+                            <a href="{$r5[url]}">立即查看</a>
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+                <div class="content-r-text r-text-r">
+                    <p><span></span>最高人气课程</p>
+                    <ul>
+                        {pc:content  action="position" posid="26" order="listorder DESC" num="5"}
+                        {loop $data $r5}
+                        <li>
+                            <a href="{$r5[url]}"> {$r5[title]}</a>
+                            <img src="{CSS_PATH}gzsjqt/public/5.png" data-level="5">
+                            <a href="{$r5[url]}">立即查看</a>
+                        </li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tab news-tab">
+    <div class="tab-head news-head">
+        <img src="{CSS_PATH}gzsjqt/public/news-title.png">
+        <span>考试咨询</span>
+        {pc:content action="category" catid="385" num="100"}
+        <div class="tab-head-title news-head-title">
+            {loop $data $k $v}
+            <a href="{$v[url]}" style="color: rgb(51, 51, 51); background: rgb(255, 255, 255);">{$v[catname]}</a>
+            {/loop}
+        </div>
+        {/pc}
+        <a href="{$CATEGORYS[386][url]}">更多>></a>
+    </div>
+    {pc:content action="category" catid="385" num="100"}
+    <div class="tab-body news-body">
+        <?php $n1 = 0;?>
+        {loop $data $k $v}
+        <?php $_catid=$v[catid];?>
+        <div class="tab-content news-content" id="news-content-<?php echo ++$n1;?>">
+            {pc:content action="category" catid="$_catid" num="4" return="data2"}
+            <?php $n2 = 0;?>
+            {loop $data2 $k2 $v2}
+            <div class="news-content-item" id="news-outer-<?php echo $n1-1;?>-<?php echo ++$n2;?>">
+                <div class="news-item-inner">
+                    <div class="news-top">
+                        <span></span>{$v2[catname]}<p class="news-slide-btn"></p>
+                    </div>
+                    <?php $_catid_list=$v2[catid];?>
+                    {pc:content action="lists" catid="$_catid_list" num="12" siteid="$siteid" return="data3"}
+                    <ul class="news-bottom">
+                        {loop $data3 $k3 $v3}
+                        <li><a href="{$v3[url]}">{$v3[title]}</a></li>
+                        {/loop}
+                    </ul>
+                    {/pc}
+                </div>
+            </div>
+            {/loop}
+            {/pc}
+        </div>
+        {/loop}
+    </div>
+    {/pc}
+</div>
+
+{template "content","_footer"}

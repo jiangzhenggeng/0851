@@ -1,0 +1,40 @@
+
+.vip.vip1 > div{
+    border: 1px solid #999;
+    color: #999;
+}
+.vip.vip1 > div i{
+    border: 1px solid #999;
+}
+
+.vip.vip2 > div{
+    border: 1px solid #cc8100;
+    color: #cc8100;
+}
+.vip.vip2 > div i{
+    border: 1px solid #cc8100;
+}
+
+.vip.vip3 > div{
+    border: 1px solid #0085d2;
+    color: #0085d2;
+}
+.vip.vip3 > div i{
+    border: 1px solid #0085d2;
+}
+
+.vip.vip4 > div{
+    border: 1px solid #d42f3f;
+    color: #d42f3f;
+}
+.vip.vip4 > div i{
+    border: 1px solid #d42f3f;
+}
+
+.vip.vip5 > div{
+    border: 1px solid #784F9C;
+    color: #784F9C;
+}
+.vip.vip5 > div i{
+    border: 1px solid #784F9C;
+}

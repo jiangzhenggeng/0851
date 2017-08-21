@@ -1,0 +1,35 @@
+<div class="fixed-header">
+    <div class="fixed-search">
+        <div class="fixed-search-mid">
+            <a href="{APP_PATH}" class="fixed-logo" style="font-size: 28px;">黔通教育</a>
+
+            <div class="fixed-nav">
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=12">培训课程</a>
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=25">培训学校</a>
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=385">考试咨询</a>
+                <a href="{APP_PATH}index.php?m=content&c=index&a=lists&catid=453">新闻动态</a>
+            </div>
+
+            <div class="fixed-search-frame">
+                <form action="{APP_PATH}index.php" method="get">
+                    <div class="get-val-wrap">
+                        <span class="get-val">课程</span> <i class="fa fa-angle-down" data-type="fa fa-angle-up"></i>
+                    </div>
+                    <input class="fixed-search-inp" type="text" name="q" placeholder="请输入您想搜索的课程">
+                    <button class="fixed-search-sub" type="submit"><i class="fa fa-search"></i></button>
+                    <ul class="fixed-se-ul">
+                        <li class="fixed-se-li" id="course2" data-url="{APP_PATH}index.php" data-typeid="57">课程</li>
+                        <li class="fixed-se-li" id="school2" data-url="{APP_PATH}index.php" data-typeid="54">学校</li>
+                        <li class="fixed-se-li" id="teacher2" data-url="{APP_PATH}index.php" data-typeid="55">资讯</li>
+                    </ul>
+
+                    <input type="hidden" name="m" value="search"/>
+                    <input type="hidden" name="c" value="index"/>
+                    <input type="hidden" name="a" value="init"/>
+                    <input type="hidden" name="typeid" id="typeid" value="<?php echo $typeid?$typeid:57;?>"/>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

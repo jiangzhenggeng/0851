@@ -1,0 +1,19 @@
+<div class="col-left col-1 left-memu">
+    <h5 class="title"><img src="{IMG_PATH}icon/m_1.png" width="15" height="15" /> {L('manage_center')}</h5>
+    <ul>
+        {php $op=$_GET[op]?$_GET[op]:'shool';}
+        <li {if ROUTE_A=="publish" && $op=='shool'} class="on"{/if}><a href="index.php?m=member&c=content&a=publish&op=shool&keep_catid=25&catid=25"><img src="{IMG_PATH}icon/m_2.png" width="14" height="15" /> 发布学校</a></li>
+        <li {if ROUTE_A=="publish" && $op=='kc'} class="on"{/if}><a href="index.php?m=member&c=content&a=publish&op=kc&keep_catid=12&catid=12"><img src="{IMG_PATH}icon/m_2.png" width="14" height="15" /> 发布课程</a></li>
+        <li {if ROUTE_A=="publish" && $op=='zx'} class="on"{/if}><a href="index.php?m=member&c=content&a=publish&op=zx&keep_catid=385&catid=385"><img src="{IMG_PATH}icon/m_2.png" width="14" height="15" /> 发布资讯</a></li>
+        <li {if ROUTE_A=="publish" && $op=='xw'} class="on"{/if}><a href="index.php?m=member&c=content&a=publish&op=xw&keep_catid=453&catid=453"><img src="{IMG_PATH}icon/m_2.png" width="14" height="15" /> 发布新闻动态</a></li>
+
+        <li {if ROUTE_A=="published" && $op=='shool'} class="on"{/if}><a href="index.php?m=member&c=content&a=published&op=shool&keep_catid=25&catid=25"><img src="{IMG_PATH}icon/m_3.png" width="14" height="16" /> 已发布学校</a></li>
+        <li {if ROUTE_A=="published" && $op=='kc'} class="on"{/if}><a href="index.php?m=member&c=content&a=published&op=kc&keep_catid=12&catid=12"><img src="{IMG_PATH}icon/m_3.png" width="14" height="16" /> 已发布课程</a></li>
+        <li {if ROUTE_A=="published" && $op=='zx'} class="on"{/if}><a href="index.php?m=member&c=content&a=published&op=zx&keep_catid=385&catid=385"><img src="{IMG_PATH}icon/m_3.png" width="14" height="16" /> 已发布资讯</a></li>
+        <li {if ROUTE_A=="published" && $op=='xw'} class="on"{/if}><a href="index.php?m=member&c=content&a=published&op=xw&keep_catid=453&catid=453"><img src="{IMG_PATH}icon/m_3.png" width="14" height="16" /> 已发布新闻动态</a></li>
+    </ul>
+    <h6 class="title">报名用户</h6>
+    <ul>
+        <li {if ROUTE_A=="lists"} class="on"{/if}><a href="index.php?m=member&c=post&a=lists"><img src="{IMG_PATH}icon/m_4.png" width="15" height="16" /> 报名用户列表</a></li>
+    </ul>
+</div>

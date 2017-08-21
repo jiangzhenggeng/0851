@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=7" />
+	<title>{if isset($SEO['title']) && !empty($SEO['title'])}{$SEO['title']}{/if}{$SEO['site_title']}</title>
+	<meta name="keywords" content="{$SEO['keyword']}">
+	<meta name="description" content="{$SEO['description']}">
+	<link href="./public/common.css" rel="stylesheet" type="text/css" />
+	<link href="./public/superSlide/default.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="./public/jquery-1.12.3.min.js"></script>
+	<script type="text/javascript" src="./public/superSlide/jquery.SuperSlide.2.1.1.js"></script>
+	<script type="text/javascript" src="./public/common.js"></script>
+</head>
+<body>
+<div class="global-warp">
+	<div class="global-header-top global-main">
+		<a><img src="./public/images/top.jpg" /></a>
+	</div>
+
+	<div class="global-nav global-main">
+		<div class="global-nav-warp">
+			{pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+			<ul class="global-nav-ul global-clear">
+				<li><a href="{siteurl($siteid)}"><span>首页</span></a></li><!--
+				{loop $data $r}
+				--><li><a href="{$r[url]}"><span>{$r[catname]}</span></a></li><!--
+				{/loop}-->
+			</ul>
+			{/pc}
+		</div>
+	</div>

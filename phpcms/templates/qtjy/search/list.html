@@ -1,0 +1,101 @@
+{php $_type='kc';}
+{template "content","_header"}
+
+<link href="{CSS_PATH}gzsjqt/course-list.css" rel="stylesheet" type="text/css">
+
+<div id="jq_position" class="auto weizhi">
+	<a href="{siteurl($siteid)}"><i class="fa fa-home"></i>网站首页</a> &gt; 搜索
+</div>
+
+
+<div class="auto clearfix">
+	<!--main-->
+	<div class="main">
+		<div id="listContent">
+			{if empty($search_data)}未找到结果{/if}
+			<ul class="main-b listBb">
+				{loop $search_data $r}
+					{if $typeid==57}
+					<li class="clearfix">
+						<div class="left detai">
+							<a target="_blank" href="{$r[url]}">{$r[title]}</a>
+							<div><span>课程人气度：{$r[hits]}</span><span>机构人气度：{getRenQi($r[shoolid])}</span></div>
+							<p class="address">{$r[school_teach]}</p>
+							<p id="datai-school">
+								<a href="/index.php?m=content&c=index&a=lists&catid={$r[jgid]}">立普教育 <img title="已认证" src="http://www.studyems.com/statics/images/duigou.jpg"></a>
+							</p>
+							<div class="vip"><div>黄金会员<i></i><b>4年</b></div></div>
+						</div>
+						<div class="left price">
+							<span>{$r[training_cost]}</span>
+						</div>
+						<div class="right zixun">
+							<div class="tell">
+								<a rel="nofollow" title="QQ客服" href="http://wpa.qq.com/msgrd?v=3&amp;uin={$r[qq]}&amp;site=黔通教育&amp;menu=yes"><img src="http://www.studyems.com/statics/images/qq.png"></a>
+							</div>
+							<div class="tell"><span>咨询热线：</span><strong>{$r[phone]}</strong></div>
+						</div>
+					</li>
+					{elseif $typeid==54}
+					<li class="clearfix">
+						<div class="left img">
+							<a target="_blank" href="{$r[url]}">
+								<img class="lazy" src="<?php echo $r[thumb]?$r[thumb]:DEF_IMG;?>" data-original="<?php echo $r[thumb]?$r[thumb]:DEF_IMG;?>" style="display: block;">
+							</a>
+						</div>
+						<div class="left detai">
+							<a target="_blank" href="{$r[url]}">{$r[title]} <img src="http://www.studyems.com/statics/images/duigou.jpg" title="已认证"></a>
+							<div><span>机构人气度：{$r[renqi]}</span></div>
+							<p>广州天河区 <a target="_blank" href="{$r[url]}#anchorMap">地图 <img src="http://www.studyems.com/statics/images/l1.png"></a></p>
+						</div>
+						<div class="left vip vip{$r[vip_type]}">
+							<div>{getVipName($r[vip_type])}<i></i><b>{$r[age_limit]}年</b></div>
+						</div>
+						<div class="right zixun">
+							<div class="tell">
+								<a rel="nofollow" title="QQ客服" href="http://wpa.qq.com/msgrd?v=3&amp;uin={$r[qq]}&amp;site=黔通教育&amp;menu=yes" target="_blank"><img src="http://www.studyems.com/statics/images/qq.png"></a>
+							</div>
+							<div class="tell"><span>咨询热线：</span><strong>{$r[phone]}</strong></div>
+						</div>
+					</li>
+					{elseif $typeid==55}
+					<li class="clearfix">
+						<em>{$CATEGORYS[$r[catid]][catname]}</em> |
+						<a href="{$r[url]}">{$r[title]}</a>
+						<span>[<?php echo $r[hits]?$r[hits]:rand(0,999);?>人浏览 ]</span>
+						<span>{date('Y-m-d',$r[inputtime])}</span>
+					</li>
+					{/if}
+				{/loop}
+			</ul>
+		</div>
+	</div>
+	<!--main-->
+	<!--saide-->
+	<div class="saide">
+		<div class="saide-a">
+			<div>
+				<form id="baomingForm" action="http://www.studyems.com/home/baoming_api/action/ajax_baoming.html" method="post">
+					<ul>
+						<li><input type="text" name="data[XingMing]" placeholder="请输入您的姓名" class="sky"></li>
+						<li><input type="text" name="data[ShouJi]" placeholder="请输入您的手机号码" class="sky phone"></li>
+						<li><input type="text" name="data[LiuYan]" placeholder="请输入您想学习的课程"></li>
+						<li class="la"><button type="submit" class="checkForm">立即报名</button></li>
+					</ul>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!--saide-->
+</div>
+
+{if $pages}
+<div id="jq_pages" class="auto">
+	<div class="page">
+		{$pages}
+	</div>
+</div>
+{/if}
+
+
+{template "content","_footer"}

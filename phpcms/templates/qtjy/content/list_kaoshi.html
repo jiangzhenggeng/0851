@@ -1,0 +1,94 @@
+{php $_type='zx';}
+{template "content","_header"}
+
+<link href="{CSS_PATH}gzsjqt/course-list.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}gzsjqt/show-kaoshi.css" rel="stylesheet" type="text/css">
+<style>
+	.main-le-c{border-top: solid 1px #dcdcdc;padding:30px 10px 0;border-bottom:1px dashed #dcdcdc;}
+	.main-le-c li{padding:10px 5px 10px 0;color:#999999;list-style:square;margin-left: 20px }
+	.main-le-c li:hover{background-color: #f1f1f1;}
+	.main-le-c li em{margin-right: 10px;}
+	.main-le-c li a{color:#333333;display: inline-block;margin: 0 20px 0 10px;width: 54%;overflow: hidden;text-overflow:ellipsis;
+		white-space:nowrap;vertical-align: bottom;position: relative;}
+	.main-le-c li a:hover{color:#ea3d41;}
+	.main-le-c li a img{margin-right: 5px;}
+	.main-le-c li span{display: inline-block;width: 15%;text-align: right;float: right;}
+	.main-le-c.bor-to{border-top: none;padding-top:0px;}
+	.main-le-c.bor-to li:first-child{padding-top: 30px}
+</style>
+
+<div id="jq_position" class="auto weizhi">
+	<a href="{siteurl($siteid)}"><i class="fa fa-home"></i>网站首页</a> &gt; {catpos($catid)}
+</div>
+
+
+<div class="auto clearfix">
+	<!--main-->
+	<div class="main">
+		<div class="main-a">
+			<ul class="main-a-to">
+				<li class="clearfix" data-id="0" id="kc-fenlei">
+					<label>咨询分类：</label>
+					<?php $_catid = $CATEGORYS[$catid][child]?$catid:$parentid;?>
+					<ol id="cateList" class="clearfix list xinglie">
+						<li><a target="_self" href="{$url}" class="fi-li <?php echo $CATEGORYS[$catid][child]?'new':'';?>">不限</a></li>
+						<li class="<?php echo $CATEGORYS[$catid][child]?'':'none';?>">&gt;</li>
+						{pc:content action="category" catid="$_catid" num="100" siteid="$siteid"}
+						{loop $data $r}
+						<li><a target="_self" class="{if $r[catid]==$catid}new{/if}" href="{$r[url]}">{$r[catname]}</a></li>
+						{/loop}
+						{/pc}
+					</ol>
+				</li>
+			</ul>
+		</div>
+		<div class="by3"></div>
+
+		<div id="listContent">
+			<?php
+                $order = 'listorder desc,id desc';
+                if($_GET['order']=='o1'){
+                    $order = 'id desc';
+                }
+                if($_GET['order']=='o2'){
+                    $order = 'hits desc,id desc';
+                }
+            ?>
+			{pc:content action="lists" order="$order" catid="$catid" num="50" siteid="$siteid" page="$page"}
+			<ul class="main-le-c">
+				{loop $data $r}
+				<li class="clearfix">
+					<em>{$CATEGORYS[$r[catid]][catname]}</em> |
+					<a href="{$r[url]}">{$r[title]}</a>
+					<span>[<?php echo $r[hits]?$r[hits]:rand(0,999);?>人浏览 ]</span>
+					<span>{date('Y-m-d',$r[inputtime])}</span>
+				</li>
+				{/loop}
+			</ul>
+			{/pc}
+		</div>
+	</div>
+	<div class="saide">
+		<ul class="main-ri-to">
+			<li id="newest">阅读排行</li>
+			{pc:content action="lists" order="hits desc" catid="385" num="20" siteid="$siteid"}
+			{loop $data $k $v}
+			<li>
+				<a href="{$v[url]}">{$v[title]}</a>
+			</li>
+			{/loop}
+			{/pc}
+		</ul>
+	</div>
+</div>
+
+{if $pages}
+<div id="jq_pages" class="auto">
+	<div class="page">
+		{$pages}
+	</div>
+</div>
+{/if}
+
+
+{template "content","_footer"}

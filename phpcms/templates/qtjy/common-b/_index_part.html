@@ -1,0 +1,68 @@
+
+<div class="main">
+    <div class="studyems027">
+        <div class="studyems059{$style}"><p>{$CATEGORYS[$partid][catname]}</p></div>
+        <div class="studyems060{$style}">
+            <div class="studyems061{$style}">
+                <div class="studyems062{$style}"><p></p></div>
+                <div class="studyems063{$style}">
+                    <ul>
+                        {pc:content action="category" catid="$partid" num="14" siteid="$siteid" order="listorder ASC"}
+                        {loop $data $r}
+                        <li><a href="{$r[url]}" target="_blank">{$r[catname]}</a></li>
+                        {/loop}
+                        {/pc}
+                    </ul>
+                </div>
+                <div class="studyems064">
+                    <p>
+                        <a href="?m=content&c=index&a=lists&catid={$partid}" target="_blank" style="color:#FFFFFF;">更多课程</a>
+                        <!--<img src="{CSS_PATH}1/images/tu27.jpg">-->
+                    </p>
+                </div>
+            </div>
+            {pc:content action="lists" catid="$partid" num="6" siteid="$siteid"}
+            <div class="studyems065">
+                {loop $data $r}
+                <div class="studyems066">
+                    <div class="studyems067">
+                        <a href="{$r[url]}" title="{$r[title]}" target="_blank">
+                            <img src="{$r[thumb]}" width="218" height="154" border="0">
+                        </a>
+                    </div>
+                    <div class="studyems068">
+                        <span><a href="{$r[url]}" target="_blank">{$r[title]}</a></span>
+                        <p>来电咨询</p>
+                    </div>
+                    <div class="studyems069">
+                        <strong><a href="{$r[url]}" target="_blank">{str_cut($r[title],18*3)}</a></strong>
+                    </div>
+                    <div class="studyems070">
+                        <span>综合分：<img src="{CSS_PATH}1/images/tu30.jpg"></span>
+                        <p>
+                            <a href="{$r[url]}" target="_blank">
+                                <img src="{CSS_PATH}1/images/tu29.jpg" border="0">
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                {/loop}
+            </div>
+            {/pc}
+            <div class="studyems071">
+                <div class="studyems072{$style}"><p>推荐培训学校</p></div>
+                {pc:content  action="position" posid="$posid" order="listorder DESC" num="9"}
+                    {loop $data $key $val}
+                    <div class="studyems073">
+                        <span><i>{$n}</i></span>
+                        <p>
+                            <a href="{$val[url]}" target="_blank">{$val[title]}</a>
+                        </p>
+                    </div>
+                    <div class="studyems074"></div>
+                    {/loop}
+                {/pc}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+
+
+.list-pic-warp:after{
+    clear: both;
+    content: '';
+    display: block;
+    width: 105%;
+}
+
+.list-pic-warp li{
+    float: left;
+    text-align: center;
+    overflow: hidden;
+    width: 170px;
+    height: 220px;
+    margin-right: 15px;
+}

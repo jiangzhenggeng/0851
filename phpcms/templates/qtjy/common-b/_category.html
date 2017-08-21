@@ -1,0 +1,50 @@
+<div class="studyems028">
+    <div class="studyems029">
+        <div class="studyems030">全部课程分类</div>
+        <div class="studyems031">
+            <div class="studyems032">
+                {php $_t=1}
+                {loop $CATEGORYS $k $v}
+                {if $v[catid]==12}
+                {loop $CATEGORYS $k2 $v2}
+                {if $v2[parentid]==$v[catid] && $_t<=6}
+                {php $_t++}
+                <div class="studyems033" data-onmouseover>
+                    <span><a href="{$v2[url]}" target="_blank">{$v2[catname]}</a></span>
+                    <div class="shangxue3" style="display:none;margin-top:-13px;">
+                        <ul>
+                            {loop $CATEGORYS $k3 $v3}
+                            {if $v3[parentid]==$v2[catid]}
+                            <li><a href="{$v3[url]}" target="_blank">{$v3[catname]}</a></li>
+                            {/if}
+                            {/loop}
+                        </ul>
+                    </div>
+                    <p>{php $_n=1}
+                        {loop $CATEGORYS $k3 $v3}
+                        {if $v3[parentid]==$v2[catid] && $_n<=3}
+                        <a href="{$v3[url]}" target="_blank">{$v3[catname]}</a>
+                        {php $_n++}
+                        {/if}
+                        {/loop}
+                    </p>
+                    <dd></dd>
+                </div>
+                {/if}
+                {/loop}
+                {/if}
+                {/loop}
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('[data-onmouseover]').hover(function () {
+            var o = $(this).find('.shangxue3');
+            o.show();
+        },function () {
+            $(this).find('.shangxue3').hide();
+        });
+    });
+</script>

@@ -1,0 +1,17 @@
+{pc:content  action="position" posid="1" order="listorder DESC" num="5"}
+<div class="like">
+	<p>
+		<span class="like-left"><i class="fa fa-heart-o"></i>猜你喜欢</span>
+		<!--<span onclick="adFavor()" class="like-right"><i class="fa fa-refresh"></i>换一批</span>-->
+	</p>
+	<div id="adFavorL">
+		{loop $data $key $val}
+		<a href="{$val['url']}">
+			<img class="lazy" src="{$val['thumb']}" data-original="{$val['thumb']}">
+			<p></p>
+			<span style="height: 25px;overflow: hidden;display: block;">{$val['title']}</span>
+		</a>
+		{/loop}
+	</div>
+</div>
+{/pc}

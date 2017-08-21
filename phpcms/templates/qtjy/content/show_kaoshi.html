@@ -1,0 +1,41 @@
+{template "content","_header"}
+
+<link href="{CSS_PATH}gzsjqt/course-details.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}gzsjqt/main1119.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}gzsjqt/show-kaoshi.css" rel="stylesheet" type="text/css">
+
+<div id="jq_position" class="auto weizhi">
+	<a href="{siteurl($siteid)}"><i class="fa fa-home"></i>网站首页</a> &gt; {catpos($catid)} > <a href="{$url}">{$title}</a>
+</div>
+
+<div class="auto clearfix show-kaoshi">
+	<!--main-->
+	<div class="main">
+		<div class="main-a">
+			<h2 class="title">{$title}</h2>
+			<div class="main-le-a-time">
+				<span style="margin: 0 15px;">{date('Y-m-d H:i:s')}</span>
+				<span style="margin: 0 15px;">来源：<em>{$copyfrom}</em></span>
+				<span style="margin: 0 15px;">发布用户：<em>{date('Y-m-d H:i:s')}</em></span>
+				<span style="margin: 0 15px;">浏览量：<i class="view" id="hits">{$hits}</i></span>
+			</div>
+			<div class="content">{$content}</div>
+		</div>
+	</div>
+	<div class="saide">
+
+		<ul class="main-ri-to">
+			<li id="newest">相关资讯</li>
+			{pc:content action="lists" order="$order" catid="$catid" num="50" siteid="$siteid"}
+			{loop $data $k $v}
+			<li>
+				<a href="{$v[url]}">{$v[title]}</a>
+			</li>
+			{/loop}
+			{/pc}
+		</ul>
+	</div>
+</div>
+
+<script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+{template "content","_footer"}

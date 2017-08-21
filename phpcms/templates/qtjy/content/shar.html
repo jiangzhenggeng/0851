@@ -1,0 +1,197 @@
+<style>
+
+    .shareInfo {
+        float: left;
+        clear: both;
+        width: 100%
+    }
+
+    .shareInfo .shareCtrl {
+        float: left;
+        height: 20px;
+        line-height: 20px;
+        cursor: pointer
+    }
+
+    .shareInfo .shareCtrl a {
+        font-family: verdana;
+        text-decoration: none;
+        display: block;
+        width: 86px;
+        _width: 90px;
+        float: left;
+        margin: 0 0 5px 0
+    }
+
+    .shareInfo .shareMt a {
+        width: 84px;
+        margin: 5px 0 5px 0
+    }
+
+    .shareInfo .sharePanel {
+        width: 90%;
+        height: auto
+    }
+
+    .shareInfo .shareNotTitlePanel {
+        height: auto
+    }
+
+    .shareInfo .shareIcon {
+        float: left;
+        height: 20px;
+        line-height: 20px;
+        width: 20px;
+        margin: 0 2px 0 2px;
+        _margin: 0 1px 0 1px;
+        cursor: pointer
+    }
+
+    .shareInfo .shareto {
+        padding-left: 10px;
+        cursor: default
+    }
+
+    .shareInfo .copy {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -437px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -437px 0 no-repeat
+    }
+
+    .shareInfo .sina_weibo {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -56px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -56px 0 no-repeat
+    }
+
+    .shareInfo .qq_weibo {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -332px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -332px 0 no-repeat
+    }
+
+    .shareInfo .qq_zone {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -387px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -387px 0 no-repeat
+    }
+
+    .shareInfo .kaixin001 {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -140px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -140px 0 no-repeat
+    }
+
+    .shareInfo .renren {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -84px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -84px 0 no-repeat
+    }
+
+    .shareInfo .douban {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -253px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -253px 0 no-repeat
+    }
+
+    .shareInfo .baidu_hi {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -360px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -360px 0 no-repeat
+    }
+
+    .shareInfo .baidu_tieba {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -412px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -412px 0 no-repeat
+    }
+
+    .shareInfo .taojianghu {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -112px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -112px 0 no-repeat
+    }
+
+    .shareInfo .sohu_weibo {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -279px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -279px 0 no-repeat
+    }
+
+    .shareInfo .netease_weibo {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -305px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -305px 0 no-repeat
+    }
+
+    .shareInfo .FaceBook {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -168px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -168px 0 no-repeat
+    }
+
+    .shareInfo .Twitter {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -196px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -196px 0 no-repeat
+    }
+
+    .shareInfo .LinkedIn {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -224px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -224px 0 no-repeat
+    }
+
+    .shareInfo .Weixin {
+        background: url(http://2.ss.faisys.com/image/site/n_shareIcn.png?v=201601191458) -29px 0 no-repeat;
+        _background: url(http://2.ss.faisys.com/image/site/n_shareIcn.gif?v=201503091711) -29px 0 no-repeat
+    }
+
+
+    .shar-header{
+        color: #fff;
+        line-height: 35px;
+        text-indent: 30px;
+        background: #c00000 url(http://2.ss.faisys.com/image/materialLib/icon/2000025.gif) 5px no-repeat;
+        font-weight: bold;
+    }
+    .index-share{
+        margin-top: 10px;
+        border: 1px solid #ff0000;
+    }
+    .shareInfo {
+        padding: 10px;
+        background: #ecf4fa url(http://2.ss.faisys.com/image/materialLib/background/1000036.jpg);
+        width: auto;
+    }
+</style>
+
+<div class="shareInfo">
+    <div class="shareCtrl shareNotTitlePanel shareMt"><a hidefocus="true" title="分享到微信" href="javascript:;"
+                                                         onclick="Site.wxShareAlter('cn/qrCode.jsp?cmd=mobiQR&amp;_s=190');return false;">
+        <div class="shareIcon Weixin"></div>
+        <div class="shareCtrl">微信</div>
+    </a><a hidefocus="true" title="复制网址" href="javascript:;" onclick="Site.copyWebSite('http://www.gzsjqt.com')">
+        <div class="shareIcon copy"></div>
+        <div class="shareCtrl">复制网址</div>
+    </a><a hidefocus="true" title="分享到腾讯微博" href="javascript:;"
+           onclick="window.open(&quot;http://v.t.qq.com/share/share.php?title=%E3%80%90%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E4%B8%96%E7%BA%AA%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E4%B8%AD%E5%BF%83%E3%80%91&amp;url=http://www.gzsjqt.com/?_sc=1&amp;pic=&quot;)">
+        <div class="shareIcon qq_weibo"></div>
+        <div class="shareCtrl">腾讯微博</div>
+    </a><a hidefocus="true" title="分享到新浪微博" href="javascript:;"
+           onclick="window.open(&quot;http://service.weibo.com/share/share.php?title=%E3%80%90%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E4%B8%96%E7%BA%AA%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E4%B8%AD%E5%BF%83%E3%80%91&amp;url=http://www.gzsjqt.com/?_sc=1&amp;pic=&quot;)">
+        <div class="shareIcon sina_weibo"></div>
+        <div class="shareCtrl">新浪微博</div>
+    </a><a hidefocus="true" title="分享到QQ空间" href="javascript:;"
+           onclick="window.open(&quot;http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?summary=&amp;url=http://www.gzsjqt.com/?_sc=1&amp;pics=&amp;title=%E3%80%90%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E4%B8%96%E7%BA%AA%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E4%B8%AD%E5%BF%83%E3%80%91&quot;)">
+        <div class="shareIcon qq_zone"></div>
+        <div class="shareCtrl">QQ空间</div>
+    </a><a hidefocus="true" title="分享到开心网" href="javascript:;"
+           onclick="window.open(&quot;http://www.kaixin001.com/rest/records.php?content=%E3%80%90%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E4%B8%96%E7%BA%AA%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E4%B8%AD%E5%BF%83%E3%80%91http%3A%2F%2Fwww.gzsjqt.com%2F%3F_sc%3D1&amp;style=11&quot;)">
+        <div class="shareIcon kaixin001"></div>
+        <div class="shareCtrl">开心网</div>
+    </a><a hidefocus="true" title="分享到人人网" href="javascript:;"
+           onclick="window.open(&quot;http://widget.renren.com/dialog/share?resourceUrl=http://www.gzsjqt.com/?_sc=1&amp;description=http%3A%2F%2Fwww.gzsjqt.com%2F%3F_sc%3D1&amp;title=%E3%80%90%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E4%B8%96%E7%BA%AA%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E4%B8%AD%E5%BF%83%E3%80%91&amp;pic=&quot;)">
+        <div class="shareIcon renren"></div>
+        <div class="shareCtrl">人人网</div>
+    </a><a hidefocus="true" title="分享到豆瓣网" href="javascript:;"
+           onclick="window.open(&quot;http://shuo.douban.com/!service/share?name=%E3%80%90%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E4%B8%96%E7%BA%AA%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E4%B8%AD%E5%BF%83%E3%80%91http%3A%2F%2Fwww.gzsjqt.com%2F%3F_sc%3D1&amp;text=http://www.gzsjqt.com/?_sc=1&amp;image=&quot;)">
+        <div class="shareIcon douban"></div>
+        <div class="shareCtrl">豆瓣网</div>
+    </a><a hidefocus="true" title="分享到网易微博" href="javascript:;"
+           onclick="window.open(&quot;http://t.163.com/article/user/checkLogin.do?info=%E3%80%90%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E4%B8%96%E7%BA%AA%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E4%B8%AD%E5%BF%83%E3%80%91http%3A%2F%2Fwww.gzsjqt.com%2F%3F_sc%3D1&amp;images=&amp;togImg=true&quot;)">
+        <div class="shareIcon netease_weibo"></div>
+        <div class="shareCtrl">网易微博</div>
+    </a><a hidefocus="true" title="分享到百度贴吧" href="javascript:;"
+           onclick="window.open(&quot;http://tieba.baidu.com/i/app/open_share_api?comment=&amp;pic=&amp;url=http://www.gzsjqt.com/?_sc=1&amp;title=%E3%80%90%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E4%B8%96%E7%BA%AA%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%EF%BC%8C%E8%B4%B5%E5%B7%9E%E9%BB%94%E9%80%9A%E6%95%99%E8%82%B2%E8%81%8C%E4%B8%9A%E5%9F%B9%E8%AE%AD%E4%B8%AD%E5%BF%83%E3%80%91http%3A%2F%2Fwww.gzsjqt.com%2F%3F_sc%3D1&quot;)">
+        <div class="shareIcon baidu_tieba"></div>
+        <div class="shareCtrl">百度贴吧</div>
+    </a></div>
+    <div class="clearfloat"></div>
+</div>
+

@@ -1,0 +1,316 @@
+﻿body{ background: #fff; }
+/*导航栏*/
+.fixed-header{
+	position: fixed; z-index: 100; width: 100%; height: 50px; background: #dc201e;
+    top: 0;
+    left: 0;
+    display: none; box-shadow: 0 5px 10px #d5a5a5;
+}
+.fixed-search-mid {
+    width: 1200px;
+    height: 50px;
+    margin: 0 auto;
+}
+.fixed-logo{ float: left; color: #fff; line-height: 50px; font-size: 16px; margin-left: 60px;}
+.fixed-logo img{ width: 141.59px; height: 40px; margin-top: 5px;}
+.fixed-nav{ float: left; margin: 0 50px;}
+.fixed-nav a{
+	height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    color: #fff;
+    margin-left: 35px;
+}
+.hx-logo-img-small {
+    display: block;
+    margin-top: 12px;
+    margin-right: 15px;
+}
+.fixed-search-frame {
+	float: left;
+    position: relative;
+    height: 25px;
+    margin-left: 50px;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+.fixed-se-ul {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: -28px;
+    width: 80px;
+    background-color: #dc201e;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.fixed-se-li {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.fixed-se-li:first-child{
+	display: none;
+}
+.fixed-se-li:hover {
+    background-color: #f22d00;
+}
+.get-val-wrap {
+    cursor: pointer; float: left; margin-top: 5px; margin-right: 5px;
+}
+.get-val {
+    height: 20px;
+    line-height: 20px;
+    color: #fff;
+}
+.get-val-wrap i{ color: #fff }
+.fixed-search-inp{
+	float: left;
+    width: 320px;
+    height: 25px;
+    line-height: 25px;
+    border: none;
+    background: #fff;
+    margin-top: 3px;
+    box-shadow: none!important;
+    transition: none;
+}
+.fixed-search-sub {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+    width: 18px;
+    height: 18px;
+    background: none;
+    cursor: pointer;
+}
+.fixed-search-sub i{ color: #999; font-size: 16px;}
+.fixed-search-sub i:hover{ color: #dc201e }
+.fixed-phone-call {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+#gohome{ display: none;}
+.nav-outer{ width: 100%; border-bottom: #dc201e solid 2px; overflow: hidden;}
+.nav{ width: 1200px; margin: 0 auto;}
+.nav p{ 
+	float: left; width: 220px; line-height: 35px; text-align: center; color: #fff; background: #dc201e;
+	border-radius: 3px 3px 0 0; font-size: 17px;
+}
+
+.main{ width: 1200px; margin: 0 auto 20px; overflow: hidden; position: relative;}
+/*滑动广告*/
+.slide-banner{ float: left; width: 760px; height: 400px; overflow: hidden; position: relative;}
+.index-banner-li{ float: left; width: 760px;}
+.index-banner-li img{ width: 100%; height: 400px;}
+.banner-bottom-nav{ position: absolute; z-index: 1; left: 50%; bottom: 5px; text-align: center;margin-left:-90px;}
+.banner-bottom-nav a{
+    display: inline-block; width: 40px; height: 5px; margin-right: 5px; background: #eee;
+}
+#banner-active{ background: #fa6943 }
+.main-right{ float: right; width: 220px;}
+.main-right-top{ width: 85%; height: 103px; margin: 20px auto 0; overflow: hidden;}
+.main-right-top img{ float: left; width: 50px; height: 50px; border-radius: 100%; margin-right: 10px;}
+.main-right-top div{ width: 100%; overflow: hidden; margin: 22px auto 16px; text-align: center;}
+.main-right-top div a{ 
+	display: inline-block; width: 40%; line-height: 23px; border: solid 1px #dc201e; text-align: center; 
+	border-radius: 2px; color: #dc201e; float: right;
+}
+.main-right-top div a:first-child{ float: left; border-color: #0f408a; background: #3f80e1; color: #fff;}
+.main-right-center{ 
+	width: 100%; height: 132px; background: #ebeff5; text-align: center; line-height: 23px; padding: 10px 0; overflow: hidden;
+}
+.main-right-center span{ color: #dc201e }
+.main-right-center span:first-child{ 
+	display: inline-block; line-height: 20px; font-size: 18px; margin-right: 10px; color: #333;
+}
+.main-right-center a{ color: #dc201e; font-size: 46px;}
+.main-right-center a small{ font-size: 26px }
+
+.main-right-down{ width: 100%; height: 145px; border-bottom: #eee solid 1px; overflow: hidden;}
+.main-right-down a{ display: block; width: 33.3%; float: left; text-align: center; padding: 14px 0 10px;}
+.main-right-down a:hover{ background: #f6e4e4; }
+.main-right-down a i{ color: #3f80e1; font-size: 28px;}
+.main-right-down a span{ display: block; }
+/*猜你喜欢*/
+.like{ width: 1200px; margin: 30px auto; overflow: hidden;}
+.like>p{ width: 100%; margin-bottom: 10px; overflow: hidden;}
+.like-left{ float: left; font-size: 18px;}
+.like-left i{ color: #dc201e; margin-right: 5px;}
+.like-right{ float: right; cursor: pointer; color: #666;}
+.like-right i{ margin-right: 5px;}
+.like>div a{ 
+	display: block; float: left; width: 19.2%; height: 115px; margin-left: 1%; text-align: center; position: relative;
+	overflow: hidden;
+}
+.like>div a:first-child{ margin-left: 0; }
+.like div img{
+	width: 100%;
+	height: 115px;
+	-ms-transform: transform 3s;
+	-webkit-transform: transform 3s;	
+	-o-transform: transform 3s;		
+	-moz-transform: transform 3s;
+	transition:transform 3s; 
+}
+.like div a:hover img{ 
+	-ms-transform: scale(1.1,1.1);
+	-webkit-transform: scale(1.1,1.1);
+	-o-transform: scale(1.1,1.1);
+	-moz-transform: scale(1.1,1.1);
+	transform: scale(1.1,1.1;)
+	
+}
+.like div p{ 
+	position: absolute; left: 0; bottom: 0; width: 100%; height: 25px;
+	background: #333; opacity: 0.8; filter: alpha(opacity=80);
+}
+.like div span{ 
+	position: absolute; left: 0; bottom: 0; width: 100%; line-height: 25px;
+	color: #fff;
+}
+.like div small{
+	position: absolute; left: 50%; margin-left: -25%; top: 25%; opacity: 0; border-radius: 3px;
+	display: block; width: 50%; line-height: 30px; text-align: center; color: #fff; background: #00AFF0;
+}
+.like div a:hover small{
+	opacity: 1;
+}
+/*公用选项卡*/
+.tab{ width: 1200px; margin: 20px auto; overflow: hidden;}
+.tab-head{ width: 100%; height: 40px; border-bottom: solid 1px #ccc; padding-bottom: 5px;}
+.tab-head p{ float: left; width: 220px; font-size: 22px;}
+.tab-head p i{ margin-right: 5px; }
+.tab-head p .fa-institution{ color: #f76402}
+.tab-head p .fa-book{ color: #4d52bc}
+.tab-head p .fa-fire{ color: #6ea3e5 }
+.tab-head-title{ float: left; width: 970px; margin-left: 10px;}
+.tab-head-title a{ float: left; font-size: 16px; line-height: 40px; text-align: center; position: relative;}
+.tab-head-title a span{ 
+	width: 80%; height: 2px; margin-left: 10%; margin-top: -2px; background: #dc201e; display: block; opacity: 0;
+	filter: alpha(opacity=0);
+}
+.tab-head-title a:first-child{ color: #dc201e;}
+.tab-head-title a:first-child span{ opacity: 1; filter: alpha(opacity=100);}
+.news-head-title a:first-child{ color: #dc201e; background: #f9f9fa;}
+.tab-body{ width: 100%; margin: 10px auto;}
+.tab-content{ width: 100%; overflow: hidden; display: none;}
+.tab-content:first-child{ display: block; }
+.tab-content-l{ float: left; width: 220px; height: 370px; background: #eee; overflow: hidden;}
+.tab-content-l img{ width: 100%; height: 100%;}
+.tab-content-r{ float: left; width: 970px; height:370px; margin-left: 10px; border: solid 1px #eee; padding: 10px;}
+.tab-content-r div:first-child{ width: 100%; margin-top: 4px; margin-bottom: 20px; overflow: hidden;}
+.tab-content-r div:first-child a{ 
+	display: block; float: left; width: 24.25%; height: 115px; margin-left: 1%; position: relative;
+}
+.tab-content-r div:first-child a:hover small{ opacity: 1; }
+.tab-content-r div:first-child a img{ width: 100%; height: 115px; display: block; transition: all 1s;}
+.tab-content-r div:first-child a:first-child{ margin-left: 0; }
+.content-r-text{ width: 47%;}
+.r-text-l{ float: left;}
+.r-text-r{ float: right;}
+.content-r-text p{ width: 100%; font-size: 16px; line-height: 19px; margin-bottom: 15px;}
+.content-r-text p span{ display: block; float: left; width: 2px; height: 20px; background: #dc201e; margin-right: 5px;}
+.content-r-text ul{ width: 100%; text-align: right;}
+.content-r-text ul li{ line-height: 35px;}
+.content-r-text ul li a{ color: #dc201e}
+.content-r-text ul li a:first-child{ 
+	display: block; float: left; width: 60%; color: #333; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;
+	text-align: left;
+}
+.content-r-text ul li a:hover{ color: #dc201e; }
+.content-r-text ul li a:last-child:hover{ text-decoration: underline;}
+.content-r-text ul li img{ width: 80px; height: 11.34px; margin-right: 30px; }
+.content-r-text ul li span{ margin-right: 40px; color: #dc201e; }
+/*团购栏目*/
+.tg-body .tab-content-r{ padding: 0 5px 0; }
+.tg-body ul{ width: 100%; }
+.tg-body ul li{ float: left; width: 25%; text-align: center; padding: 0 5px; margin: 0 0 10px;}
+.active-bg{display:block;position:relative;overflow:hidden;}
+.active-bg img{display: block; width: 100%; height: 118px;}
+.active-by{
+	background: #000;opacity: 0;filter: alpha(opacity=0);transition: opacity 1s;
+	position: absolute;top:0;left: 0;z-index: 99;width: 100%;height: 100%;
+}
+.active-bg small{
+	position: absolute; left: 50%; margin-left: -25%; top: 40%; opacity: 0; filter: alpha(opacity=0); border-radius: 2px;
+	display: block; width: 50%; line-height: 30px; text-align: center; color: #fff; background: #00AFF0;
+	-ms-transform: all 1s;
+	-webkit-transform: all 1s;	
+	-o-transform: all 1s;		
+	-moz-transform: all 1s;
+	transition:all 1s; z-index: 100;
+}
+.active-bg:hover .active-by{opacity: 0.6;filter: alpha(opacity=60);}
+.active-bg:hover small{opacity: 1;filter: alpha(opacity=100);}
+.tg-title{ 
+	display: block; width: 100%; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; text-align: left;
+	margin: 3px 0;
+}
+.tg-title:hover{ color: #dc201e; }
+.tg-body ul li span{ margin: 0 10px 0 0; color: #dc201e; font-size: 12px;}
+.tg-body ul li span b{ font-size: 14px; }
+.tg-body ul li del{ margin: 0 0 0 10px; font-size: 12px;}
+/*新闻栏目*/
+.news-tab{ padding-top: 10px;}
+.news-head{ border-top: solid 2px #dc201e; border-bottom: none; position: relative;}
+.news-head-title{ width: 950px; }
+.news-head>img{ float: left; width: 174px; height: 46px; margin-top: -12px;}
+.news-head>span{ position: absolute; left: 33px; line-height: 20px; font-size: 22px; color: #fff;}
+.news-head>a{ float: right; line-height: 40px; color: #dc201e;}
+.news-head-title{}
+.news-head-title a{ width: auto; padding: 0 22px; text-align: center;}
+.news-title-active{ background: #f9f9fa; color: #dc201e;}
+.news-body{ margin-top: 0; }
+.news-content{}
+.news-content>div{ 
+	float: left; width: 49.6%; background: #f9f9fa; margin-bottom: 10px; padding: 10px 0; overflow: hidden;
+}
+.news-item-inner{ width: 565px; height: 230px; margin: 0 auto; overflow: hidden;}
+.news-top{ width: 100%; margin-top: 10px; margin-bottom: 15px; font-size: 16px;}
+.news-top>span{ float: left; display: block; width: 3px; height: 15px; background: #dc201e; margin: 4px 5px 0 0;}
+.news-top p{ float: right; }
+
+
+
+.news-banner>li{ float: left;}
+.news-center{ margin-bottom: 15px; overflow: hidden;}
+
+.news-center h5{ font-size: 15px; margin-bottom: 10px; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+
+.news-center>a{ display: block; height: 40px; color: #666; overflow: hidden;}
+.news-center a:hover{ color: #dc201e }
+.news-bottom{ overflow: hidden; }
+.news-bottom li{ width: 48%; margin: 5px 0; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;}
+.news-bottom li a:hover{ color: #dc201e }
+/*右侧固定浮动菜单*/
+.fixed-menu{ position: fixed; top: 100px; right: 30px;}
+.fixed-menu div{ margin-bottom: 10px; cursor: pointer;}
+.fixed-menu div{ 
+	width: 40px; height: 40px; line-height: 40px; color: #fff; border-radius: 5px; background: #bf0705;
+	text-align: center; position: relative; overflow: hidden;
+}
+.fixed-menu div i{ font-size: 18px; }
+.fixed-menu div p{ 
+	position: absolute; z-index: 1; left: 0; top: 0; width: 100%; height: 100%;
+	background: #7c0d0c; line-height: 16px; padding-top: 8px; box-sizing: border-box; border-radius: 5px;
+	transform: rotate3d(0,0,1,50deg); transition: transform .3s ease-in; transform-origin: -50% 50%;
+}
+#trans-p{ transform: rotate3d(0,0,1,0deg);}
+/*友情链接*/
+.link{
+    width: 1200px; margin: 20px auto; overflow: hidden; border: #eee solid 1px; padding: 10px 0;
+    position: relative;
+}
+.link-left{
+    position: absolute; left: 0; top: 0; width: 8%; height: 100%; text-align: center; overflow: hidden;
+    background: url(images/link.jpg) center no-repeat;
+}
+.link-right{ float: right; width: 92%; border-left: #ccc dashed 1px;}
+.link-right a{ margin-left: 10px; line-height: 23px; display: inline-block;}
+.link-right a:hover{ color: #dc201e;}

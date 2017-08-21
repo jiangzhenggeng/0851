@@ -1,0 +1,115 @@
+{php $_type='xx';}
+{template "content","_header"}
+
+<link href="{CSS_PATH}gzsjqt/shool-list.css" rel="stylesheet" type="text/css">
+<link href="{CSS_PATH}gzsjqt/vip.css" rel="stylesheet" type="text/css">
+
+<div id="jq_position" class="auto weizhi">
+    <a href="{siteurl($siteid)}"><i class="fa fa-home"></i>网站首页</a> &gt; {catpos($catid)}
+</div>
+
+
+<div class="auto clearfix">
+    <!--main-->
+    <div class="main">
+        <div class="main-a">
+            <ul class="main-a-to">
+                <li class="clearfix" data-id="0" id="kc-fenlei">
+                    <label>课程分类：</label>
+                    <?php $_catid = $CATEGORYS[$catid][child]?$catid:$parentid;?>
+                    <ol id="cateList" class="clearfix list xinglie">
+                        <li><a target="_self" href="{$CATEGORYS[$parentid][url]}" class="fi-li <?php echo $CATEGORYS[$catid][child]?'new':'';?>">不限</a></li>
+                        <li class="<?php echo $CATEGORYS[$catid][child]?'':'none';?>">&gt;</li>
+                        {pc:content action="category" catid="$_catid" num="100" siteid="$siteid"}
+                        {loop $data $r}
+                        <li><a target="_self" class="{if $r[catid]==$catid}new{/if}" href="{$r[url]}">{$r[catname]}</a></li>
+                        {/loop}
+                        {/pc}
+                    </ol>
+                </li>
+            </ul>
+            <ul class="clearfix rank">
+                <li>排序</li>
+                <li class="List <?php echo !isset($_GET['order'])?'new':'';?>"><a href="{$url}" target="_self">综合</a></li>
+                <li class="List <?php echo $_GET['order']=='o1'?'new':'';?>"><a href="{$url}&order=o1" target="_self">最新</a></li>
+                <li class="List <?php echo $_GET['order']=='o2'?'new':'';?>"><a href="{$url}&order=o2" target="_self">人气</a></li>
+                <li class="List <?php echo $_GET['order']=='o3'?'new':'';?>"><a href="{$url}&order=o3" target="_self">会员</a></li>
+                <li class="List <?php echo $_GET['order']=='o4'?'new':'';?>"><a href="{$url}&order=o4" target="_self">年限</a></li>
+            </ul>
+        </div>
+        <div class="by3"></div>
+
+        <div id="listContent">
+            <?php
+                $order = 'listorder desc,id desc';
+                if($_GET['order']=='o1'){
+                    $order = 'id desc';
+                }
+                if($_GET['order']=='o2'){
+                    $order = 'renqi desc,id desc';
+                }
+                if($_GET['order']=='o3'){
+                    $order = 'vip_type desc,id desc';
+                }
+                if($_GET['order']=='o4'){
+                    $order = 'age_limit desc,id desc';
+                }
+            ?>
+            {pc:content action="lists" order="$order" catid="$catid" num="10" siteid="$siteid" page="$page"}
+            <ul class="main-b listBb">
+                {loop $data $r}
+                <li class="clearfix">
+                    <div class="left img">
+                        <a target="_blank" href="{$r[url]}">
+                            <img class="lazy" src="<?php echo $r[thumb]?$r[thumb]:DEF_IMG;?>" data-original="<?php echo $r[thumb]?$r[thumb]:DEF_IMG;?>" style="display: block;">
+                        </a>
+                    </div>
+                    <div class="left detai">
+                        <a target="_blank" href="{$r[url]}">{$r[title]} <img src="http://www.studyems.com/statics/images/duigou.jpg" title="已认证"></a>
+                        <div><span>机构人气度：{$r[renqi]}</span></div>
+                        <p>{$r[city]} <a target="_blank" href="{$r[url]}#anchorMap">地图 <img src="http://www.studyems.com/statics/images/l1.png"></a></p>
+                    </div>
+                    <div class="left vip vip{$r[vip_type]}">
+                        <div>{getVipName($r[vip_type])}<i></i><b>{$r[age_limit]}年</b></div>
+                    </div>
+                    <div class="right zixun">
+                        <div class="tell">
+                            <a rel="nofollow" title="QQ客服" href="http://wpa.qq.com/msgrd?v=3&amp;uin={$r[qq]}&amp;site=黔通教育&amp;menu=yes" target="_blank"><img src="http://www.studyems.com/statics/images/qq.png"></a>
+                        </div>
+                        <div class="tell"><span>咨询热线：</span><strong>{$r[phone]}</strong></div>
+                    </div>
+                </li>
+                {/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>
+    <!--main-->
+    <!--saide-->
+    <div class="saide">
+        <div class="saide-a">
+            <div>
+                <form id="baomingForm" action="{APP_PATH}index.php?m=member&c=post&a=apply" method="post">
+                    <ul>
+                        <li><input type="text" name="apply[name]" placeholder="请输入您的姓名" class="sky"></li>
+                        <li><input type="text" name="apply[tel]" placeholder="请输入您的手机号码" class="sky phone"></li>
+                        <li><input type="text" name="apply[content]" placeholder="请输入您想学习的课程"></li>
+                        <li class="la"><button type="submit" class="checkForm">立即报名</button></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!--saide-->
+</div>
+
+{if $pages}
+<div id="jq_pages" class="auto">
+    <div class="page">
+        {$pages}
+    </div>
+</div>
+{/if}
+
+
+{template "content","_footer"}

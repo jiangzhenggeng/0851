@@ -1,0 +1,36 @@
+{template "content","_header"}
+{template "post","_header"}
+<div class="container">
+    <div class="form-horizontal login ovh">
+        <form action="?" target="_self" method="post">
+            <input type="hidden"name="m" value="post">
+            <input type="hidden"name="c" value="index">
+            <input type="hidden"name="a" value="login">
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">用户名</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="user[username]" placeholder="请输入用户名">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" name="user[password]" placeholder="请输入密码">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-2">
+
+                </div>
+                <div class="col-sm-10">
+                    <button class="btn btn-success"><a href="?m=post&a=register" target="_self">注册</a></button>
+                    <button class="btn btn-primary" type="submit">登录</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+{template "content","_footer"}

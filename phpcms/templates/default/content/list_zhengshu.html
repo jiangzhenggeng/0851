@@ -1,0 +1,74 @@
+{template "content","header"}
+<link href="./public/index.css" rel="stylesheet" type="text/css" />
+<link href="./public/list.css" rel="stylesheet" type="text/css" />
+
+<div class="global-main index-body global-clear">
+    <div class="index-left-silder fl">
+        {template "content","left"}
+    </div>
+    <div class="index-right-silder fr">
+        <div class="index-right-cell index-share global-clear" style="margin-top: 0">
+            <div class="shar-header">分享网站</div>
+            {template "content","shar"}
+        </div>
+
+        <div class="border mt-10">
+            <div class="all-header list-title">
+                <span>{$CATEGORYS[$catid]['catname']}</span>
+                <a href="{$CATEGORYS[$catid][url]}" target="_blank" class="fr">更多</a>
+            </div>
+            <div class="list-warp">
+                {pc:content action="lists" catid="$catid" num="20" order="id DESC"  page="$page"}
+                <ul class="global-nav-ul global-clear list-pic-warp">
+                    {loop $data $r}
+                    <li>
+                        <a href="{$r[url]}">
+
+                            <div class="list-pic">
+                                <img src="{$r[thumb]}">
+                            </div>
+                            <span>{$r[title]}</span>
+                        </a>
+                    </li>
+
+                    {/loop}
+                </ul>
+                <div class="text-c mg_t20" id="pages">{$pages}</div>
+                {/pc}
+            </div>
+        </div>
+
+        <script language='javascript' src='{APP_PATH}index.php?m=formguide&c=index&a=show&formid=12&action=js&siteid=1'></script>
+
+
+
+        <div class="border mt-10 mb-10">
+            <div class="all-header list-title">
+                <span>{$CATEGORYS[25]['catname']}</span>
+                <a href="{$CATEGORYS[25][url]}" target="_blank" class="fr">更多</a>
+            </div>
+            <div class="list-warp">
+                <ul>
+                    {pc:content action="lists" catid="25" num="20" order="id DESC"}
+                    <ul class="global-nav-ul global-clear">
+                        {loop $data $r}
+                        <li>
+                            <a href="{$r[url]}">
+                                <span>{$r[title]}</span>
+                                <div class="fr">
+                                    <span class="category">[{$CATEGORYS[$r[catid]][catname]}]</span>
+                                    <span class="time">{date('Y-m-d',$r['inputtime'])}</span>
+                                </div>
+                            </a>
+                        </li>
+                        {/loop}
+                    </ul>
+                    {/pc}
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{template "content","footer"}
